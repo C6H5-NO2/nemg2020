@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - MapBlock
   - 
   - 
   - 
@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: MapBlock
+    uniqueID: 18946737
+    locked: 0
+  - name: FollowMouse
+    uniqueID: 100364601
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
