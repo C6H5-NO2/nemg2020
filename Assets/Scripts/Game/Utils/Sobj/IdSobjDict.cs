@@ -23,7 +23,7 @@ namespace Game.Utils.Sobj {
 
 
         public void Add(T sobj) {
-        #if UNITY_EDITOR
+        #if GAME_DEBUG_MODE
             DuplicationCheck(sobj);
         #endif
             idDict.Add(sobj.id, sobj);

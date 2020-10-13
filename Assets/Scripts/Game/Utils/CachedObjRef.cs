@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Game.Prop;
+using UnityEngine;
 
 namespace Game.Utils {
     [DefaultExecutionOrder(-10)]
@@ -8,5 +9,12 @@ namespace Game.Utils {
 
         public Camera MainCamera => mainCamera;
         public SpriteRenderer FollowMouseBlockHolderRenderer => followMouseBlockHolderRenderer;
+
+
+        public PropReprGroup GameProps { get; set; }
+
+        protected override void OnInstanceAwake() {
+            GameProps = new PropReprGroup();
+        }
     }
 }

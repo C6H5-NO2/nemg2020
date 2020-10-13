@@ -6,6 +6,7 @@ namespace Game.Utils.Sobj {
         public int id;
         public string nameid;
         public string readableName;
-        public Sprite mapImage;
+        public Sprite mainImage;
+        [TextArea] public string mainDescription;
     }
 }
