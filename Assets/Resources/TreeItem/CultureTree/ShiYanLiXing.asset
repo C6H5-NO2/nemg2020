@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
+  m_Name: ShiYanLiXing
+  m_EditorClassIdentifier: 
+  id: 17
+  nameid: shi_yan_li_xing
+  readableName: "\u5B9E\u9A8C\u7406\u6027"
+  mainImage: {fileID: 0}
+  mainDescription: "\u51CF\u5C11\u201C\u5B9E\u9A8C\u5931\u8D25\u201D\u7684\u635F\u5931,\u5B9E\u9A8C\u5BA4\u7981\u7528\u65F6\u95F4\u51CF\u5C111\u56DE\u5408\uFF08\u539F\u672C\u4E3A4\u56DE\u5408)"
+  subDescription: "\u6211\u4EEC\u5E94\u8BE5\u5BF9\u8FD9\u4E9B\u5B9E\u9A8C\u52A0\u4EE5\u9002\u5F53\u7684\u9650\u5236"
+  unlockCost:
+    population: 9550
+    populationDelta: 0
+    finance: 8682
+    financeDelta: 0
+  prevTreeItems:
+  - {fileID: 11400000, guid: 306ac2520ad389d40b96c9a1b3923883, type: 2}
+  - {fileID: 11400000, guid: 0ba175af945d5b3498a6f3b0341ba90f, type: 2}

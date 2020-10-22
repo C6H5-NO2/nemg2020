@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
+  m_Name: QiYouJi
+  m_EditorClassIdentifier: 
+  id: 34
+  nameid: qi_you_ji
+  readableName: "\u6C7D\u6CB9\u673A"
+  mainImage: {fileID: 0}
+  mainDescription: "\u589E\u52A0\u77FF\u4E95\u4EA7\u91CF50%"
+  subDescription: "\u5C0F\u5DE7\u800C\u5B89\u9759\u7684"
+  unlockCost:
+    population: 1143
+    populationDelta: 0
+    finance: 1257
+    financeDelta: 0
+  prevTreeItems:
+  - {fileID: 11400000, guid: 03518b89f9bc1cc49921fcce42b3de50, type: 2}
+  - {fileID: 11400000, guid: a6f78362b0ff1114999b73371372d14c, type: 2}

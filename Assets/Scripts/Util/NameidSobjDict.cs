@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Util {
     public class NameidSobjDict<T> : IEnumerable<T> where T : IdSobj {
@@ -31,6 +32,9 @@ namespace Util {
         }
 
 
+        public int Count => nameidDict.Count;
+
+
         public IEnumerator<T> GetEnumerator() => nameidDict.Values.GetEnumerator();
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
@@ -46,9 +50,46 @@ namespace Util {
             return false;
         }
 
-
+    #if GAME_DEBUG_MODE
+        public T this[int id] {
+            get {
+                T obj = null;
+                try {
+                    obj = nameidDict[idDict[id]];
+                }
+                catch(KeyNotFoundException) {
+                    Debug.LogError($"Dict of {typeof(T)} does not contain key {id}");
+                }
+                catch(Exception e) {
+                    Debug.LogError(e.Message);
+                }
+                return obj;
+            }
+        }
+    #else
         public T this[int id] => nameidDict[idDict[id]];
+    #endif
+
+    #if GAME_DEBUG_MODE
+        public T this[string nameid] {
+            get {
+                T obj = null;
+                try {
+                    obj = nameidDict[nameid];
+                }
+                catch(KeyNotFoundException) {
+                    Debug.LogError($"Dict of {typeof(T)} does not contain key {nameid}");
+                }
+                catch(Exception e) {
+                    Debug.LogError(e.Message);
+                }
+                return obj;
+            }
+        }
+    #else
         public T this[string nameid] => nameidDict[nameid];
+    #endif
+
 
         public int NameidToId(string nameid) => nameidDict[nameid].id;
         public string IdToNameid(int id) => idDict[id];

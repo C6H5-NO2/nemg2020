@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
+  m_Name: ZhingYangKongTiao
+  m_EditorClassIdentifier: 
+  id: 36
+  nameid: zhong_yang_kong_tiao
+  readableName: "\u4E2D\u592E\u7A7A\u8C03"
+  mainImage: {fileID: 0}
+  mainDescription: "\u51CF\u5C11\u9AD8\u6E29\u707E\u5BB3\u5BF9\u8D44\u4EA7\u7684\u5F71\u54CD30%"
+  subDescription: "\u54E6\uFF0C\u73B0\u5728\u7A7A\u8C03\u751A\u81F3\u4E0D\u8981\u94B1\u4E86\u5417"
+  unlockCost:
+    population: 2077
+    populationDelta: 0
+    finance: 2285
+    financeDelta: 0
+  prevTreeItems:
+  - {fileID: 11400000, guid: a6f78362b0ff1114999b73371372d14c, type: 2}
+  - {fileID: 11400000, guid: 4fdbecdad3d65c64189cd36db252f3be, type: 2}

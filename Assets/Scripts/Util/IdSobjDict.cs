@@ -31,6 +31,9 @@ namespace Util {
         }
 
 
+        public int Count => idDict.Count;
+
+
         public IEnumerator<T> GetEnumerator() => idDict.Values.GetEnumerator();
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

@@ -4,7 +4,7 @@ using UnityEngine;
 using Util;
 
 namespace Map {
-    public class MapBlock : IIdSobjWrapper<BuildingSobj> {
+    public class MapBlock : ISobjWrapper<BuildingSobj> {
         public MapBlock(int x, int y) {
             Position = new Vector2Int(x, y);
         }

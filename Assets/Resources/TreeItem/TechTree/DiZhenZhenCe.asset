@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
+  m_Name: DiZhenZhenCe
+  m_EditorClassIdentifier: 
+  id: 37
+  nameid: di_zhen_zhen_ce
+  readableName: "\u5730\u9707\u4FA6\u6D4B"
+  mainImage: {fileID: 0}
+  mainDescription: "\u514D\u75AB\u5730\u9707"
+  subDescription: "\u5927\u5730\u5728\u98A4\u6296\uFF0C\u800C\u6211\u4EEC\u770B\u7740\u5B83\u98A4\u6296\uFF0C\u7EE7\u7EED\u559D\u8336"
+  unlockCost:
+    population: 987
+    populationDelta: 0
+    finance: 1085
+    financeDelta: 0
+  prevTreeItems:
+  - {fileID: 11400000, guid: a6f78362b0ff1114999b73371372d14c, type: 2}
+  - {fileID: 11400000, guid: 4fdbecdad3d65c64189cd36db252f3be, type: 2}

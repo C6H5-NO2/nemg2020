@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Util;
 
 namespace Turn.Buff {
-    // todo: optimize
-    public class BuffQueue {
+    // optimize using C5.priorityQueue (?)
+    public class BuffQueue : ManualSingleton<BuffQueue> {
         public BuffQueue() {
             buffs = new List<IBuff>(64);
         }
@@ -38,5 +39,9 @@ namespace Turn.Buff {
         }
 
         private readonly List<IBuff> buffs;
+
+        public override void OnReset() {
+            buffs.Clear();
+        }
     }
 }

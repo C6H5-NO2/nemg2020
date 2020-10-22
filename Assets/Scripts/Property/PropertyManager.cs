@@ -1,13 +1,26 @@
-﻿namespace Property {
-    public class PropertyManager {
+﻿using UnityEngine;
+using Util;
+
+namespace Property {
+    public class PropertyManager : ManualSingleton<PropertyManager> {
         public PropertyManager() {
             GameProp = new PropertyReprGroup();
         }
 
-        public PropertyReprGroup GameProp { get; private set; }
+        private PropertyReprGroup gameProp;
+        public PropertyReprGroup GameProp {
+            get => gameProp;
 
-        public void Reset() {
-            GameProp = new PropertyReprGroup();
+            private set {
+                gameProp = value;
+
+                var ins = SceneObjRef.Instance;
+                if(ins != null) {
+                    var ui = ins.GamePropUI;
+                    if(ui != null)
+                        ui.UpdateText();
+                }
+            }
         }
 
         public void AddProperty(PropertyRepr prop) {
@@ -27,11 +40,18 @@
         }
 
         public bool CanSubtractProperty(PropertyRepr prop) {
-            return !(GameProp - prop).Any(p => p < 0);
+            var ans = GameProp - prop;
+            return ans[PropertyType.Population] >= 0 && ans[PropertyType.Finance] >= 0;
         }
 
         public bool CanSubtractProperty(PropertyReprGroup group) {
-            return !(GameProp - group).Any(p => p < 0);
+            //return !(GameProp - group).Any(p => p < 0);
+            var ans = GameProp - group;
+            return ans[PropertyType.Population] >= 0 && ans[PropertyType.Finance] >= 0;
+        }
+
+        public override void OnReset() {
+            GameProp = new PropertyReprGroup();
         }
     }
 }

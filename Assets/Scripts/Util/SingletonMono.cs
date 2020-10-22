@@ -7,7 +7,7 @@ namespace Util {
         protected abstract void OnInstanceAwake();
 
         private void Awake() {
-            if(Instance.CheckLifetime())
+            if(Instance != null)
                 Destroy(this);
             else {
                 Instance = (T)this;

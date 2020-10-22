@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b66ec0a0ac73184db8fa80225a16408, type: 3}
+  m_Name: DiZhiKanTan
+  m_EditorClassIdentifier: 
+  id: 1
+  nameid: di_zhi_kan_tan
+  readableName: "\u5730\u8D28\u52D8\u63A2"
+  mainImage: {fileID: 0}
+  mainDescription: "\u8BA9\u90A3\u7FA4\u6240\u8C13\u7684\u5730\u8D28\u5B66\u5BB6\u53BB\u8FDB\u884C\u52D8\u63A2\u5427\uFF0C\u53CD\u6B63\u4E5F\u82B1\u4E0D\u4E86\u591A\u5C11\u8D44\u6E90\u3002"
+  type: 0
+  initProbability: 1
+  options:
+  - {fileID: 11400000, guid: 5837475448ca09044b28371865a1a40f, type: 2}

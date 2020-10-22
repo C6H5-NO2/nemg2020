@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
+  m_Name: YunDongHui
+  m_EditorClassIdentifier: 
+  id: 9
+  nameid: yun_dong_hui
+  readableName: "\u8FD0\u52A8\u4F1A"
+  mainImage: {fileID: 0}
+  mainDescription: "\u4EBA\u529B\u589E\u91CF+=\u5F53\u524D\u4EBA\u529B\u589E\u91CF*10%"
+  subDescription: "\u4ED6\u4EEC\u8DD1\u3001\u8DF3\u3001\u518D\u73B0\u7740\u5730\u7403\u4EBA\u7684\u8363\u5149"
+  unlockCost:
+    population: 5306
+    populationDelta: 0
+    finance: 4823
+    financeDelta: 0
+  prevTreeItems:
+  - {fileID: 11400000, guid: 3fa8950cf99d2a74da56dfff0332337a, type: 2}
+  - {fileID: 11400000, guid: 35ea940a7617c0f4a99ab2bf885311ce, type: 2}

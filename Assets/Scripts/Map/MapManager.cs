@@ -2,9 +2,10 @@
 using System.Linq;
 using Property;
 using UnityEngine;
+using Util;
 
 namespace Map {
-    public class MapManager {
+    public class MapManager : ManualSingleton<MapManager> {
         public MapManager(Vector2Int size) {
             mapBlocks = new MapBlock[size.x, size.y];
             MapBlocksEnumerable = mapBlocks.Cast<MapBlock>();
@@ -35,5 +36,7 @@ namespace Map {
         }
 
         private MapBlock[,] mapBlocks;
+
+        public override void OnReset() { }
     }
 }

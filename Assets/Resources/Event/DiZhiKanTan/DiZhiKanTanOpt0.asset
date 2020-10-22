@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9036216696d407fa8c11cdafea9c6b5, type: 3}
+  m_Name: DiZhiKanTanOpt0
+  m_EditorClassIdentifier: 
+  mainDescription: "\u7EE7\u7EED"
+  chooseCost:
+    population: 0
+    populationDelta: 0
+    finance: 0
+    financeDelta: 0
+  results:
+  - {fileID: 11400000, guid: 9a62bf54b7c517c4d9ba6c0583cb88a7, type: 2}
+  - {fileID: 11400000, guid: 1ca55ac4f5f6f4e419b5fc7cfb6f3506, type: 2}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
+  m_Name: LiTiNongYe
+  m_EditorClassIdentifier: 
+  id: 22
+  nameid: li_ti_nong_ye
+  readableName: "\u7ACB\u4F53\u519C\u4E1A"
+  mainImage: {fileID: 0}
+  mainDescription: "\u89E3\u9501\u5EFA\u7B51\u201C\u6E29\u5BA4\u201D\n\u6539\u53D8\u7530\u5730\u5EFA\u7B51\u5916\u89C2\uFF0C\u7530\u5730\u63D0\u4F9B\u7684\u8D44\u4EA7\u589E\u91CF\uFF1A36\u219272"
+  subDescription: "\u4E0D\u662F\u4F20\u7EDF\u7684\u519C\u7530\uFF0C\u8FD9\u4E2A\u66F4\u4E11\uFF0C\u4F46\u662F\u51FA\u8D27\u66F4\u591A"
+  unlockCost:
+    population: 686
+    populationDelta: 0
+    finance: 754
+    financeDelta: 0
+  prevTreeItems:
+  - {fileID: 11400000, guid: 06066d5d63cf83448889d28f425e669a, type: 2}
+  - {fileID: 11400000, guid: 93c178ff0b89f7342b143053cb747124, type: 2}

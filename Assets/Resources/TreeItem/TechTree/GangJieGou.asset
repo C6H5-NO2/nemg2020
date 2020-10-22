@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
+  m_Name: GangJieGou
+  m_EditorClassIdentifier: 
+  id: 30
+  nameid: gang_jie_gou
+  readableName: "\u94A2\u7ED3\u6784"
+  mainImage: {fileID: 0}
+  mainDescription: "\u89E3\u9501\u5EFA\u7B51\u201C\u9AD8\u5C42\u4F4F\u5B85\u201D\n\u514D\u75AB\u201C\u4F4F\u5B85\u5012\u584C\u201D\n\u6539\u53D8\u4F4F\u623F\u5EFA\u7B51\u5916\u89C2\uFF0C\u4F4F\u623F\u63D0\u4F9B\u7684\u4EBA\u529B\u589E\u91CF\uFF1A30\u219245"
+  subDescription: "\u53C8\u8F7B\u53C8\u5FEB"
+  unlockCost:
+    population: 1246
+    populationDelta: 0
+    finance: 1371
+    financeDelta: 0
+  prevTreeItems:
+  - {fileID: 11400000, guid: a6f78362b0ff1114999b73371372d14c, type: 2}
+  - {fileID: 11400000, guid: a8e8ce7f90fe347419db5d8ba21d7668, type: 2}

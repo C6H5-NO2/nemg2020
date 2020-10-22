@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9036216696d407fa8c11cdafea9c6b5, type: 3}
+  m_Name: CaiZhengBoKuanOpt1
+  m_EditorClassIdentifier: 
+  mainDescription: "\u62E8\u6B3E\u3010-10\u4EBA\u3011\u3010-10\u8D44\u4EA7\u3011"
+  chooseCost:
+    population: 10
+    populationDelta: 0
+    finance: 10
+    financeDelta: 0
+  results:
+  - {fileID: 11400000, guid: 493529729b6fcc5408c8dc9199469fa1, type: 2}
+  - {fileID: 11400000, guid: a23109eff4eb3fb4290c28e3a1cf88ca, type: 2}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
+  m_Name: QuanMingKuangHuan
+  m_EditorClassIdentifier: 
+  id: 59
+  nameid: quan_ming_kuang_huan
+  readableName: "\u5168\u6C11\u72C2\u6B22"
+  mainImage: {fileID: 0}
+  mainDescription: "\u4EBA\u529B\u589E\u91CF+=\u5F53\u524D\u4EBA\u529B\u589E\u91CF*10%"
+  subDescription: "\u829C\u6E56"
+  unlockCost:
+    population: 6367
+    populationDelta: 0
+    finance: 5788
+    financeDelta: 0
+  prevTreeItems:
+  - {fileID: 11400000, guid: e69f2adb05df88342a6ff9c60aeac38c, type: 2}
+  - {fileID: 11400000, guid: 76a47d9d4788c614096b50c1ce1b8ff9, type: 2}

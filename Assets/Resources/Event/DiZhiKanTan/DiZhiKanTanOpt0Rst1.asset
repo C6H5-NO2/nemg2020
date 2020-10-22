@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982bfc52f6204cb78509165186a5ef92, type: 3}
+  m_Name: DiZhiKanTanOpt0Rst1
+  m_EditorClassIdentifier: 
+  readableName: "\u8D2B\u6CB9\u4E95"
+  substituteDescription: "\u81F3\u5C11\u6211\u4EEC\u6709\u4E1C\u897F\u53EF\u62FF\uFF0C\u4E0D\u662F\u4E48\u3002"
+  probability: 0.2
+  instantOutcome:
+    population: 10
+    populationDelta: 0
+    finance: 10
+    financeDelta: 0
+  buffOutcome:
+    propertyGroup:
+      population: 0
+      populationDelta: 0
+      finance: 0
+      financeDelta: 0
+    activeTurns: 0

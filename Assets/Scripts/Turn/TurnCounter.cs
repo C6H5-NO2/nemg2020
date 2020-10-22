@@ -1,7 +1,9 @@
 ﻿using System;
+using UnityEngine;
+using Util;
 
 namespace Turn {
-    public class TurnCounter {
+    public class TurnCounter : ManualSingleton<TurnCounter> {
         public TurnCounter() {
             TurnCount = 0;
         }
@@ -10,11 +12,16 @@ namespace Turn {
 
         public event Action<int> OnNewTurn;
 
-        public void Reset() => TurnCount = 0;
-
         public void NewTurn() {
             ++TurnCount;
+            Debug.Log($"New turn: {TurnCount}");
             OnNewTurn?.Invoke(TurnCount);
+        }
+
+        public override void OnReset() {
+            TurnCount = 1;
+            // todo: set to 0 in release!!!
+            //OnNewTurn = null;
         }
     }
 }

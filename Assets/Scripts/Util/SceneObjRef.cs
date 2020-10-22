@@ -1,10 +1,25 @@
-﻿using UnityEngine;
+﻿using Event;
+using UI;
+using UnityEngine;
 
 namespace Util {
-    [DefaultExecutionOrder(-10)]
+    [DefaultExecutionOrder(-20)]
     public class SceneObjRef : SingletonMono<SceneObjRef> {
         [SerializeField] private Camera mainCamera = null;
         public Camera MainCamera => mainCamera;
+
+        [Header("Overlay Canvas")] [SerializeField]
+        private GamePropUI gamePropUI = null;
+        public GamePropUI GamePropUI => gamePropUI;
+
+        [Header("Main Canvas")] [SerializeField]
+        private Canvas mainCanvas = null;
+        public Canvas MainCanvas => mainCanvas;
+
+        [Header("Event Canvas")] [SerializeField]
+        private EventUI eventUI = null;
+        public EventUI EventUI => eventUI;
+
 
         protected override void OnInstanceAwake() { }
     }

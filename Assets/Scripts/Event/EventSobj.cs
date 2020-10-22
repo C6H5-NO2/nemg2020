@@ -2,12 +2,15 @@
 using Util;
 
 namespace Event {
-    public enum EventType { Policy, Catastrophe }
+    public enum EventType { Policy, Catastrophe, Story }
 
-    [CreateAssetMenu(fileName = "EventSobj", menuName = "Event/Event")]
+    [CreateAssetMenu(fileName = "EventSobj", menuName = "Event/Event", order = 1)]
     public class EventSobj : IdSobj {
         public EventType type;
-        public float initProbability;
+        public float initProbability = 1;
+        public EventOptionSobj[] options;
+
+
         public EventWrapper wrapper;
     }
 }

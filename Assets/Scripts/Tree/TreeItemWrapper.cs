@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Linq;
+using Property;
 using Util;
 
 namespace Tree {
-    public class TreeItemWrapper : IIdSobjWrapper<TreeItemSobj>, IUnlockable {
+    public class TreeItemWrapper : ISobjWrapper<TreeItemSobj>, IUnlockable {
         public TreeItemWrapper(TreeItemSobj sobj) {
             Sobj = sobj;
             Sobj.wrapper = this;
-            
         }
 
         public TreeItemSobj Sobj { get; }
@@ -24,8 +24,8 @@ namespace Tree {
             if(Unlocked)
                 return false;
 
-            // trigger event instead?
-            if(!SingleObjRef.Instance.PropertyManagerInstance.CanSubtractProperty(Sobj.unlockCost))
+            // trigger event instead (?)
+            if(!PropertyManager.Instance.CanSubtractProperty(Sobj.unlockCost))
                 return false;
 
             if(Sobj.prevTreeItems.Any(item => !item.wrapper.Unlocked))
@@ -40,7 +40,7 @@ namespace Tree {
         public bool TryUnlock() {
             if(!CanUnlock())
                 return false;
-            SingleObjRef.Instance.PropertyManagerInstance.SubtractProperty(Sobj.unlockCost);
+            PropertyManager.Instance.SubtractProperty(Sobj.unlockCost);
             Unlocked = true;
             onUnlocked?.Invoke(this);
             return true;

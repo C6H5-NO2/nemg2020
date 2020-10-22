@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
+  m_Name: YinYueGuangChang
+  m_EditorClassIdentifier: 
+  id: 16
+  nameid: yin_yue_guang_chang
+  readableName: "\u97F3\u4E50\u5E7F\u573A"
+  mainImage: {fileID: 0}
+  mainDescription: "\u4EBA\u529B\u589E\u91CF+=\u5F53\u524D\u4EBA\u529B\u589E\u91CF*10%"
+  subDescription: "\u4ED6\u4EEC\u90A3\u8FB9\u53EB\u7A46\u624E\uFF0C\u6211\u4EEC\u8FD9\u8FB9\u53EB\u83AB\u624E\u7279"
+  unlockCost:
+    population: 6367
+    populationDelta: 0
+    finance: 5788
+    financeDelta: 0
+  prevTreeItems:
+  - {fileID: 11400000, guid: 306ac2520ad389d40b96c9a1b3923883, type: 2}
+  - {fileID: 11400000, guid: 207dad00f2d25814db50a72f4ae78d15, type: 2}
+  - {fileID: 11400000, guid: f1f6a9c213e35ef4e9a82b86212abc90, type: 2}
