@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 21
   nameid: ge_re_tu_liao
   readableName: "\u9694\u70ED\u6D82\u6599"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 562e8a29edd42804ba5d33029f63e48a, type: 3}
   mainDescription: "\u51CF\u5C11\u9AD8\u6E29\u707E\u5BB3\u7684\u5F71\u54CD30%"
+  type: 1
   subDescription: "\u65E0\u8BBA\u662F\u6811\u8102\uFF0C\u8FD8\u662F\u5408\u6210\u5316\u5B66\u54C1\uFF0C\u53EA\u8981\u6696\u548C\u5C31\u597D\u4E86"
   unlockCost:
     population: 499

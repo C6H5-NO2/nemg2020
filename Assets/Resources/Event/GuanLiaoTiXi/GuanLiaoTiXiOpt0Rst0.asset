@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982bfc52f6204cb78509165186a5ef92, type: 3}
+  m_Name: GuanLiaoTiXiOpt0Rst0
+  m_EditorClassIdentifier: 
+  readableName: "\u4E2D\u592E\u59D4\u5458\u4F1A"
+  substituteDescription: "\u3010\u4E2D\u592E\u59D4\u5458\u4F1A\u3011\u6211\u4EEC\u65B0\u8BBE\u7ACB\u4E86\u4E00\u6279\u5E74\u8F7B\u5B98\u5458\u6765\u5B8C\u5584\u6211\u4EEC\u7684\u76D1\u7763\u4F53\u5236\uFF0C\u65F6\u95F4\u4F1A\u9A8C\u8BC1\u8FD9\u662F\u5426\u6709\u6548\u3002\n"
+  probability: 1
+  instantOutcome:
+    population: 0
+    populationDelta: 0
+    finance: 0
+    financeDelta: 0
+  buffOutcome:
+    propertyGroup:
+      population: 0
+      populationDelta: 0
+      finance: 0
+      financeDelta: 0
+    activeTurns: 0

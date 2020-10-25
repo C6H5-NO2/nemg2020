@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9036216696d407fa8c11cdafea9c6b5, type: 3}
   m_Name: CaiZhengBoKuanOpt1
   m_EditorClassIdentifier: 
-  mainDescription: "\u62E8\u6B3E\u3010-10\u4EBA\u3011\u3010-10\u8D44\u4EA7\u3011"
+  mainDescription: "\u62E8\u6B3E"
   chooseCost:
     population: 10
     populationDelta: 0

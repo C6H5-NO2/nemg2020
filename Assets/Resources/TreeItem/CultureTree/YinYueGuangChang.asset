@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
   m_Name: YinYueGuangChang
   m_EditorClassIdentifier: 
-  id: 16
+  id: 56
   nameid: yin_yue_guang_chang
   readableName: "\u97F3\u4E50\u5E7F\u573A"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 99cd5e1f560a4c843a465f6f578aafd3, type: 3}
   mainDescription: "\u4EBA\u529B\u589E\u91CF+=\u5F53\u524D\u4EBA\u529B\u589E\u91CF*10%"
   subDescription: "\u4ED6\u4EEC\u90A3\u8FB9\u53EB\u7A46\u624E\uFF0C\u6211\u4EEC\u8FD9\u8FB9\u53EB\u83AB\u624E\u7279"
   unlockCost:

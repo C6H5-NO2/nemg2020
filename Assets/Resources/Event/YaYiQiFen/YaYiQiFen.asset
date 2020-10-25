@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b66ec0a0ac73184db8fa80225a16408, type: 3}
+  m_Name: YaYiQiFen
+  m_EditorClassIdentifier: 
+  id: 20
+  nameid: ya_yi_qi_fen
+  readableName: "\u538B\u6291\u6C14\u6C1B"
+  mainImage: {fileID: 21300000, guid: 29fc6eb8882dd3b4cba1356b98cfd28f, type: 3}
+  mainDescription: "\u8FC7\u4E8E\u8270\u82E6\u7684\u6761\u4EF6\u4F7F\u4EBA\u4EEC\u5FC3\u60C5\u4F4E\u843D\u3002\r\n\u60F3\u529E\u6CD5\u8BA9\u4ED6\u4EEC\u632F\u4F5C\u70B9\u5427\u3002\r\n"
+  type: 1
+  initProbability: 0.01
+  options:
+  - {fileID: 11400000, guid: 2662a9a91c3ecab4dadbf8ab80dd3585, type: 2}

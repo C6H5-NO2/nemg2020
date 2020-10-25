@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 13
   nameid: feng_dong_li
   readableName: "\u98CE\u52A8\u529B"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 8413c29610556d542a158ae7ad5f8080, type: 3}
   mainDescription: "\u589E\u52A0\u7530\u5730\u63D0\u4F9B\u7684\u8D44\u4EA7\u589E\u91CF20%"
+  type: 1
   subDescription: "\u5927\u98CE\u8F66\u5431\u5440\u5431\u6E9C\u6E9C\u5730\u8F6C"
   unlockCost:
     population: 223

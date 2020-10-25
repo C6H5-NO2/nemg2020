@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
   m_Name: BuLuoJingShen
   m_EditorClassIdentifier: 
-  id: 1
+  id: 40
   nameid: bu_luo_jing_shen
   readableName: "\u90E8\u843D\u7CBE\u795E"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 22c037dff3bb71542b782b8cf7a24b76, type: 3}
   mainDescription: 
   subDescription: 
   unlockCost:

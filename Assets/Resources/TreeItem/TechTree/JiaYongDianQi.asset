@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 31
   nameid: jia_yong_dian_qi
   readableName: "\u5BB6\u7528\u7535\u5668"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 381a0ed9c4ea6bd40a8067de419111dc, type: 3}
   mainDescription: "\u51CF\u5C11\u4F4E\u6E29\u548C\u9AD8\u6E29\u707E\u5BB3\u5BF9\u4EBA\u529B\u7684\u5F71\u54CD\u81F3\u539F\u6709\u5F71\u54CD\u768420%"
+  type: 1
   subDescription: "\u592A\u597D\u4E86\uFF0C\u73B0\u5728\u6211\u4EEC\u6709\u7A7A\u8C03\u4E86"
   unlockCost:
     population: 831

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9036216696d407fa8c11cdafea9c6b5, type: 3}
+  m_Name: SanRenChengZhongOpt1
+  m_EditorClassIdentifier: 
+  mainDescription: "\u7EE7\u7EED"
+  chooseCost:
+    population: 20
+    populationDelta: 0
+    finance: 0
+    financeDelta: 0
+  results:
+  - {fileID: 11400000, guid: 6d2af4b9e4e8ee448b7533986db711a8, type: 2}
+  - {fileID: 11400000, guid: 993ca1bf535574e40bf79c56e7d98ab2, type: 2}
+  - {fileID: 11400000, guid: c461bc58064836a439a0d9ff95ec1faa, type: 2}

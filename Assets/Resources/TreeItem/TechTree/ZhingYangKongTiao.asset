@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 36
   nameid: zhong_yang_kong_tiao
   readableName: "\u4E2D\u592E\u7A7A\u8C03"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: e04b9cb8f423cc240939d594d33c61cf, type: 3}
   mainDescription: "\u51CF\u5C11\u9AD8\u6E29\u707E\u5BB3\u5BF9\u8D44\u4EA7\u7684\u5F71\u54CD30%"
+  type: 1
   subDescription: "\u54E6\uFF0C\u73B0\u5728\u7A7A\u8C03\u751A\u81F3\u4E0D\u8981\u94B1\u4E86\u5417"
   unlockCost:
     population: 2077

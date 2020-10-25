@@ -2,10 +2,12 @@
 using Util;
 
 namespace Building {
-    public enum BuildingTag { Empty }
+    public enum BuildingTag { Empty, ResPoint, Ruin }
 
     [CreateAssetMenu(fileName = "BuildingSobj", menuName = "Building/Sobj")]
     public class BuildingSobj : IdSobj, IUnlockable {
+        public readonly Vector2Int size = Vector2Int.one;
+        public Sprite uiIcon;
         public BuildingTag tag;
         public bool initAsLocked;
 

@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 27
   nameid: dian_li_shui_beng
   readableName: "\u7535\u529B\u6C34\u6CF5"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 2c09e8849c0294c4593a575a2e5a2561, type: 3}
   mainDescription: "\u51CF\u5C11\u6240\u6709\u66B4\u96E8\u3001\u6D77\u5578\u3001\u6D2A\u6C34\u7684\u5F71\u54CD40%"
+  type: 1
   subDescription: "\u8C22\u5929\u8C22\u5730\uFF0C\u4F60\u6709\u5728\u542C\u6211\u7684\u95EE\u9898"
   unlockCost:
     population: 592

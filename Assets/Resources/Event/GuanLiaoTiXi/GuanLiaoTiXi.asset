@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b66ec0a0ac73184db8fa80225a16408, type: 3}
+  m_Name: GuanLiaoTiXi
+  m_EditorClassIdentifier: 
+  id: 23
+  nameid: guan_liao_ti_xi
+  readableName: "\u5B98\u50DA\u4F53\u7CFB"
+  mainImage: {fileID: 21300000, guid: 603c1b3ab78b4a344b35b5456541503e, type: 3}
+  mainDescription: "\u957F\u671F\u6DF7\u4E71\u7684\u7BA1\u7406\u4F53\u7CFB\u4F7F\u5F97\u8D2A\u6C61\u7684\u98CE\u6C14\u53D8\u5F97\u5341\u5206\u4E25\u91CD\u3002\r\n\u4F60\u9700\u8981\u60F3\u529E\u6CD5\u6574\u987F\u4E00\u4E0B\u5B98\u5458\u4F5C\u98CE\uFF0C\u5426\u5219\u8FD8\u4F1A\u6709\u6BD4\u4E0A\u5468\u66F4\u52A0\u4E25\u91CD\u7684\u95EE\u9898\u53D1\u751F\u3002\r\n"
+  type: 1
+  initProbability: 0.01
+  options:
+  - {fileID: 11400000, guid: 310e4667359e6f740ab51194c8d85c0f, type: 2}

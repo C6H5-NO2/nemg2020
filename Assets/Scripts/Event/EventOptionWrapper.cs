@@ -15,10 +15,10 @@ namespace Event {
         public EventOptionSobj Sobj { get; }
         public EventSobj EventSource { get; }
 
-        /// <summary> Fill when loaded </summary>
-        public Func<bool> CanUnlock = () => true;
+        /// <remarks> Set by <c>EventWrapper</c>. Can be overriden. CAN NOT be null </remarks>
+        public Predicate<EventOptionSobj> CanUnlock = (option) => true;
 
-        /// <summary> Fill when loaded </summary>
+        /// <remarks> Set manually. CAN be null </remarks>
         public Action<EventOptionSobj> OnSelected;
     }
 }

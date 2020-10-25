@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
   m_Name: GuiZuFaAn
   m_EditorClassIdentifier: 
-  id: 15
+  id: 44
   nameid: gui_zu_fa_an
   readableName: "\u8D35\u65CF\u6CD5\u6848"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: deb1f7c36195c9748a0592fadd3673cc, type: 3}
   mainDescription: 
   subDescription: 
   unlockCost:

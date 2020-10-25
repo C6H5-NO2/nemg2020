@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 11
   nameid: jian_zhu_bao_wen
   readableName: "\u5EFA\u7B51\u4FDD\u6E29"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: b3b2191a8a621284d8229e51b59849b6, type: 3}
   mainDescription: "\u51CF\u5C11\u4F4E\u6E29\u707E\u5BB3\u7684\u5F71\u54CD30%"
+  type: 1
   subDescription: "\u4E00\u680B\u4E0D\u6F0F\u98CE\u7684\u623F\u5B50\u662F\u5E78\u798F\u751F\u6D3B\u7684\u57FA\u672C\u4FDD\u969C"
   unlockCost:
     population: 254

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b66ec0a0ac73184db8fa80225a16408, type: 3}
+  m_Name: ZongJiaoKuangRe
+  m_EditorClassIdentifier: 
+  id: 16
+  nameid: zong_jiao_kuang_re
+  readableName: "\u5B97\u6559\u72C2\u70ED"
+  mainImage: {fileID: 21300000, guid: 227c869caafcb6f48b3fe455e8f7097e, type: 3}
+  mainDescription: "\u5728\u8FD9\u6837\u7684\u4E00\u4E2A\u65B0\u751F\u6587\u660E\u51FA\u73B0\u5B97\u6559\uFF0C\u662F\u4E00\u4EF6\u4E0D\u600E\u4E48\u4EE4\u4EBA\u610F\u5916\u7684\u4E8B\u60C5\u3002\r\n\u6709\u4E00\u540D\u7537\u5B50\u81EA\u79F0\u5148\u77E5\u3002\u4ED6\u5728\u5404\u5904\u5BA3\u4F20\u81EA\u5DF1\u7684\u795E\u3002\r\n\u6076\u52A3\u7684\u751F\u5B58\u6761\u4EF6\uFF0C\u6210\u4E3A\u4E86\u5B97\u6559\u4F20\u64AD\u7684\u6700\u597D\u6E29\u5E8A\u3002\u8BB8\u591A\u4EBA\u4EEC\u90FD\u5F00\u59CB\u4FE1\u4EF0\u8FD9\u4E2A\u5168\u65B0\u7684\u5B97\u6559\u3002\r\n\u67D0\u4E2A\u70ED\u70C8\u7684\u6E05\u6668\uFF0C\u4ED6\u4EEC\u6325\u821E\u7740\u957F\u77DB\u548C\u4ED6\u4EEC\u7684\u201C\u5723\u7ECF\u201C\u805A\u96C6\u5728\u57FA\u5730\u95E8\u53E3\u8981\u6C42\u628A\u4ED6\u4EEC\u7684\u5B97\u6559\u5199\u5165\u4F5C\u4E3A\u56FD\u6559\u3002\r\n\r"
+  type: 1
+  initProbability: 0.01
+  options:
+  - {fileID: 11400000, guid: 1eab9d8174588384a8162c3b69156d15, type: 2}
+  - {fileID: 11400000, guid: 3e2a8892a2f39e0488894549073b46d6, type: 2}

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
   m_Name: JueDouFaAn
   m_EditorClassIdentifier: 
-  id: 2
+  id: 47
   nameid: jue_dou_fa_an
   readableName: "\u89D2\u6597\u6CD5\u6848"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 99d50abc9c73921418e0d1c849c09220, type: 3}
   mainDescription: 
   subDescription: "\u6709\u89D2\u6597\u8868\u6F14\u7684\u65E5\u5B50\u91CC\uFF0C\u89D2\u6597\u573A\u603B\u662F\u6324\u6EE1\u4E86\u4EBA\uFF0C\u4EBA\u4EEC\u5BF9\u4E8E\u8FD9\u79CD\u539F\u59CB\u7684\u66B4\u529B\u7684\u559C\u7231\u8D85\u8FC7\u4E86\u5927\u90E8\u5206\u5176\u4ED6\u4E1C\u897F"
   unlockCost:

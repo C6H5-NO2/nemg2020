@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 19
   nameid: ke_xie_shi_yan_shi
   readableName: "\u79D1\u5B66\u5B9E\u9A8C\u5BA4"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: f4fe633f376e4d7478d4b088ff4048aa, type: 3}
   mainDescription: 
+  type: 1
   subDescription: 
   unlockCost:
     population: 623

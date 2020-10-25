@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 33
   nameid: jing_mi_ji_xie
   readableName: "\u7CBE\u5BC6\u673A\u68B0"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 767122ec2c34a8940ba1ed938b7222d9, type: 3}
   mainDescription: "\u589E\u52A0\u7530\u5730\u63D0\u4F9B\u7684\u8D44\u4EA7\u589E\u91CF20%"
+  type: 1
   subDescription: "\u6211\u4EEC\u5E94\u8BE5\u8BAD\u7EC3\u4E9B\u8682\u8681\u6765\u5E2E\u5FD9\u96D5\u523B\u8FD9\u4E9B\u7EC6\u5C0F\u7684\u90E8\u4EF6"
   unlockCost:
     population: 727

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982bfc52f6204cb78509165186a5ef92, type: 3}
+  m_Name: BaGong2Opt0Rst0
+  m_EditorClassIdentifier: 
+  readableName: "\u63D0\u9AD8\u5956\u91D1"
+  substituteDescription: "\u4ED6\u4EEC\u786E\u5B9E\u662F\u5728\u4E89\u53D6\u81EA\u5DF1\u7684\u6743\u5229\uFF0C\u4F46\u662F\u4ED6\u4EEC\u4E5F\u662F\u8D2A\u5FC3\u7684"
+  probability: 1
+  instantOutcome:
+    population: 0
+    populationDelta: 0
+    finance: 0
+    financeDelta: 0
+  buffOutcome:
+    propertyGroup:
+      population: 0
+      populationDelta: 0
+      finance: 0
+      financeDelta: 0
+    activeTurns: 0

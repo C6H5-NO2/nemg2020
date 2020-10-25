@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 12
   nameid: cha_yang
   readableName: "\u63D2\u79E7"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 0deaee7b5c618b54ab57779eb9059af3, type: 3}
   mainDescription: "\u89E3\u9501\u5EFA\u7B51\u201C\u6C34\u7530\u201D\n\u6539\u53D8\u7530\u5730\u5EFA\u7B51\u5916\u89C2\uFF0C\u7530\u5730\u63D0\u4F9B\u7684\u8D44\u4EA7\u589E\u91CF\uFF1A18\u219236"
+  type: 1
   subDescription: "\u6BD4\u8D77\u9762\u6761\u6211\u66F4\u559C\u6B22\u5403\u7C73\u996D"
   unlockCost:
     population: 350

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982bfc52f6204cb78509165186a5ef92, type: 3}
+  m_Name: PanLuanOpt3Rts0
+  m_EditorClassIdentifier: 
+  readableName: "\u65E0\u76F8\u5173\u7684\u4EBA\u6587\u6811"
+  substituteDescription: "\u8FD9\u573A\u53DB\u4E71\u7ED9\u6211\u4EEC\u5E26\u6765\u4E86\u5DE8\u5927\u7684\u635F\u5931\u3002\u4F60\u5E94\u8BE5\u53CD\u601D\u4E00\u4E0B\u4F60\u4F5C\u4E3A\u4E00\u4E2A\u9886\u5BFC\u8005\u7684\u5931\u804C\u3002"
+  probability: 1
+  instantOutcome:
+    population: 0
+    populationDelta: -10
+    finance: 0
+    financeDelta: -10
+  buffOutcome:
+    propertyGroup:
+      population: 0
+      populationDelta: 0
+      finance: 0
+      financeDelta: 0
+    activeTurns: 0

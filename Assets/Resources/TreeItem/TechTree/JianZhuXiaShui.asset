@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 3
   nameid: jian_zhu_xia_shui
   readableName: "\u5EFA\u7B51\u4E0B\u6C34"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: d1bb5c6d4e2c42d4488fd9a597894e6d, type: 3}
   mainDescription: "\u51CF\u5C11\u66B4\u96E8\u3001\u6D77\u5578\u3001\u6D2A\u6C34\u7684\u5F71\u54CD30%"
+  type: 1
   subDescription: "\u4EBA\u4EEC\u4EE5\u524D\u771F\u7684\u5728\u5927\u8857\u4E0A\u89E3\u51B3\u5185\u6025\u5417"
   unlockCost:
     population: 117

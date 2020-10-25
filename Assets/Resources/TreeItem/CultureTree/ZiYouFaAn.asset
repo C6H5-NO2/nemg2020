@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
   m_Name: ZiYouFaAn
   m_EditorClassIdentifier: 
-  id: 58
+  id: 62
   nameid: zi_you_fa_an
   readableName: "\u81EA\u7531\u6CD5\u6848"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: d337893be5261a84c8f9595d1834a555, type: 3}
   mainDescription: 
   subDescription: 
   unlockCost:

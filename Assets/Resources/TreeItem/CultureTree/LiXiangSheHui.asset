@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
   m_Name: LiXiangSheHui
   m_EditorClassIdentifier: 
-  id: 63
+  id: 48
   nameid: li_xiang_she_hui
   readableName: "\u7406\u60F3\u793E\u4F1A"
   mainImage: {fileID: 0}

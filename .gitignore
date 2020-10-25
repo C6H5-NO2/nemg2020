@@ -48,12 +48,11 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Addition
+Assets/Fonts.meta
+Assets/Fonts/
 Assets/Plugins.meta
 Assets/Plugins/
 Assets/TextMesh Pro.meta
 Assets/TextMesh Pro/
-Assets/Fonts.meta
-Assets/Fonts/
-
-Assets/Scripts/Game/Test.meta
-Assets/Scripts/Game/Test/
+Assets/Sprites.meta
+Assets/Sprites/

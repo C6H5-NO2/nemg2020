@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982bfc52f6204cb78509165186a5ef92, type: 3}
+  m_Name: KuShuOpt0Rts1
+  m_EditorClassIdentifier: 
+  readableName: "\u6563\u70ED\u6D82\u6599"
+  substituteDescription: "\u3010\u9694\u70ED\u6D82\u6599\u3011\u662F\u7684\uFF0C\u53EA\u8981\u6211\u4EEC\u4E0D\u51FA\u53BB\u5C31\u597D\u4E86\u3002"
+  probability: 1
+  instantOutcome:
+    population: 0
+    populationDelta: 0
+    finance: 0
+    financeDelta: 0
+  buffOutcome:
+    propertyGroup:
+      population: 0
+      populationDelta: 0
+      finance: 0
+      financeDelta: 0
+    activeTurns: 0

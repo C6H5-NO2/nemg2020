@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 16
   nameid: hun_ning_shui_ba
   readableName: "\u6DF7\u51DD\u6C34\u575D"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: c8b8416f45b3fa44eb7b5d23b2ba3dc8, type: 3}
   mainDescription: "\u514D\u75AB\u6D2A\u6C34\u3001\u6D77\u5578"
+  type: 1
   subDescription: "\u6DF7\u51DD\u571F\uFF0C\u5C31\u662F\u4EBA\u5DE5\u77F3\u5934\uFF0C\u5C31\u662F\u783C"
   unlockCost:
     population: 636

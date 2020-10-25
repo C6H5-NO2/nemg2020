@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 6
   nameid: ji_chu_ji_xie
   readableName: "\u57FA\u7840\u673A\u68B0"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: c0e170077e8fc1440983c54c1a62d612, type: 3}
   mainDescription: "\u89E3\u9501\u5EFA\u7B51\u201C\u77FF\u4E95\u201D"
+  type: 1
   subDescription: "\u4E00\u5F00\u59CB\u6211\u4EEC\u7528\u7684\u662F\u6ED1\u8F6E\uFF0C\u6CA1\u6709\u9F7F"
   unlockCost:
     population: 161

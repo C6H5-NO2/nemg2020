@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 17
   nameid: chou_shui_beng
   readableName: "\u62BD\u6C34\u6CF5"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 377a1e3d46cc3f742bba1780f4ffcdb8, type: 3}
   mainDescription: "\u51CF\u5C11\u6240\u6709\u66B4\u96E8\u3001\u6D77\u5578\u3001\u6D2A\u6C34\u7684\u5F71\u54CD20%"
+  type: 1
   subDescription: "\u5982\u679C\u6211\u4EEC\u9760\u4EBA\u6447\u6765\u62BD\u6C34\uFF0C\u90A3\u4E48\u6211\u4EEC\u4E3A\u4EC0\u4E48\u4E0D\u76F4\u63A5\u7528\u8200\u7684"
   unlockCost:
     population: 302

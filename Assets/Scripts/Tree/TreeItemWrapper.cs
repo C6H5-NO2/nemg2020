@@ -14,6 +14,7 @@ namespace Tree {
 
 
         /// <returns> True for can unlock, false otherwise. </returns>
+        /// <remarks> Set manually. CAN be null. </remarks>
         public Func<TreeItemWrapper, bool> unlockPredicate;
 
         public Action<TreeItemWrapper> onUnlocked;

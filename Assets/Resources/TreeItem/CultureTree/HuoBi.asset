@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
   m_Name: HuoBi
   m_EditorClassIdentifier: 
-  id: 46
+  id: 45
   nameid: huo_bi
   readableName: "\u8D27\u5E01"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: bdbde062dd0fb654984f0b739f5e732b, type: 3}
   mainDescription: "\u8D44\u4EA7\u589E\u91CF+=\u5F53\u524D\u8D44\u4EA7\u589E\u91CF*30%"
   subDescription: "\u767D\u8272\u7684\u5C0F\u8D1D\u58F3\uFF0C\u5F88\u4EAE\uFF0C\u91CC\u9762\u8FD8\u6709\u53EA\u8783\u87F9\u5462"
   unlockCost:

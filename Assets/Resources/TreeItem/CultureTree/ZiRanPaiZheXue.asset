@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
   m_Name: ZiRanPaiZheXue
   m_EditorClassIdentifier: 
-  id: 4
+  id: 61
   nameid: zi_ran_pai_zhe_xue
   readableName: "\u81EA\u7136\u6D3E\u54F2\u5B66"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 1fbcf1bbccffad84d91dd4f615a7c209, type: 3}
   mainDescription: "\u51CF\u5C1130%\u7531\u201C\u53DB\u4E71\u201D\u3001\u201C\u5B97\u6559\u72C2\u70ED\u884C\u4E3A\u201D\u9020\u6210\u7684\u635F\u5931"
   subDescription: "\u4E07\u7269\u4E4B\u6E90\u662F\u706B\uFF0C\u4EC0\u4E48\uFF0C\u4F60\u8BF4\u662F\u6C34\uFF0C\u8FD9\u6211\u4E0D\u80FD\u63A5\u53D7"
   unlockCost:

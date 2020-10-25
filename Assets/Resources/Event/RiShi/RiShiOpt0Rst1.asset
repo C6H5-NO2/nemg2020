@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RiShiOpt0Rst1
   m_EditorClassIdentifier: 
   readableName: "\u70B9\u51FA\u521D\u7B49\u6559\u80B2\u6CD5\u540E\u514D\u75AB"
-  substituteDescription: "\u6CA1\u6709\u4EBA\u5BB3\u6015\u3002"
+  substituteDescription: "\u3010\u521D\u7B49\u6559\u80B2\u6CD5\u3011\u6CA1\u6709\u4EBA\u5BB3\u6015\u3002"
   probability: 1
   instantOutcome:
     population: 0

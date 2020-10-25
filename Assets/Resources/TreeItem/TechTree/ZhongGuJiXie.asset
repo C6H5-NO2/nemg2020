@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 14
   nameid: zhong_gu_ji_xie
   readableName: "\u4E2D\u53E4\u673A\u68B0"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: bacb5a6cb52896641a9a88dd8caa20b7, type: 3}
   mainDescription: "\u589E\u52A0\u77FF\u4E95\u63D0\u4F9B\u7684\u8D44\u4EA7\u589E\u91CF100%"
+  type: 1
   subDescription: "\u6C89\u91CD\u800C\u6613\u751F\u9508\u7684"
   unlockCost:
     population: 350

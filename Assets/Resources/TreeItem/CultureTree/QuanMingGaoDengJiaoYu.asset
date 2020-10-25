@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
   m_Name: QuanMingGaoDengJiaoYu
   m_EditorClassIdentifier: 
-  id: 61
+  id: 49
   nameid: quan_ming_gao_deng_jiao_yu
   readableName: "\u5168\u6C11\u9AD8\u7B49\u6559\u80B2"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 905b99c3a99cdcd4890d8ef2edfbc877, type: 3}
   mainDescription: 
   subDescription: "\u6211\u4EEC\u662F\u641E\u7814\u7A76\uFF01\u4E0D\u662F\u5403\u767D\u996D"
   unlockCost:

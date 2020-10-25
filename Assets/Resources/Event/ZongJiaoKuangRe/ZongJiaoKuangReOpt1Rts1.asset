@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982bfc52f6204cb78509165186a5ef92, type: 3}
+  m_Name: ZongJiaoKuangReOpt1Rts1
+  m_EditorClassIdentifier: 
+  readableName: "\u6210\u529F"
+  substituteDescription: "\u3010\u8C08\u5224\u6210\u529F\u3011\u4ED6\u4EEC\u662F\u53EF\u4EE5\u529D\u8BF4\u7684\uFF0C\u5728\u8FD9\u4E2A\u5168\u65B0\u7684\u6587\u660E\uFF0C\u5B97\u6559\u7684\u6839\u57FA\u8FD8\u592A\u8584\u3002"
+  probability: 0
+  instantOutcome:
+    population: 0
+    populationDelta: 0
+    finance: 0
+    financeDelta: 0
+  buffOutcome:
+    propertyGroup:
+      population: 0
+      populationDelta: 0
+      finance: 0
+      financeDelta: 0
+    activeTurns: 0

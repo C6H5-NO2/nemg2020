@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
   m_Name: SiXingFaAn
   m_EditorClassIdentifier: 
-  id: 6
+  id: 52
   nameid: si_xing_fa_an
   readableName: "\u6B7B\u5211\u6CD5\u6848"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: c6edddff02912c044acaa1dffb282a1e, type: 3}
   mainDescription: "\u5F53\u51FA\u73B0\u53DB\u4E71\u65F6\u589E\u52A0\u9009\u9879\u201C\u5904\u6B7B\u6E38\u884C\u8005\u201D"
   subDescription: "\u4ED6\u4EEC\u7684\u5934\u9AD8\u9AD8\u5730\u6302\u5728\u90A3\u91CC\uFF0C\u8B66\u793A\u7740\u6240\u6709\u4EBA"
   unlockCost:

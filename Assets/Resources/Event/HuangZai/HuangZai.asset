@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b66ec0a0ac73184db8fa80225a16408, type: 3}
+  m_Name: HuangZai
+  m_EditorClassIdentifier: 
+  id: 7
+  nameid: huang_zai
+  readableName: "\u8757\u707E"
+  mainImage: {fileID: 21300000, guid: 1b3313e8df7e487478378a72c5e4163f, type: 3}
+  mainDescription: "\u4F60\u624B\u4E0B\u7BA1\u519C\u573A\u7684\u201C\u5148\u751F\u201D\u662F\u4E00\u4F4D\u51FA\u8272\u7684\u6444\u5F71\u5E08\uFF0C\u4ED6\u4ECA\u5929\u4E0A\u5348\u9001\u6765\u4E86\u4E00\u7EC4\u5F53\u5730\u7684\u7C7B\u8757\u866B\u751F\u7269\u7684\u7167\u7247\uFF0C\u4ED6\u8BF4\uFF0C\u5C3D\u7BA1\u636E\u89C2\u5BDF\u4ED6\u4EEC\u4F3C\u4E4E\u5E76\u4E0D\u662F\u5F88\u559C\u6B22\u5403\u5730\u7403\u4E0A\u7684\u4F5C\u7269\uFF0C\u4F46\u662F\u4ED6\u4EEC\u7684\u51FA\u73B0\u4ECD\u5BFC\u81F4\u4E86\u5F88\u5927\u7A0B\u5EA6\u7684\u7CAE\u98DF\u51CF\u4EA7\u3002"
+  type: 1
+  initProbability: 0.01
+  options:
+  - {fileID: 11400000, guid: 2937c8558a27b3a4caa73574e2190835, type: 2}

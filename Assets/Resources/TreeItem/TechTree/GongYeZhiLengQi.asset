@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 26
   nameid: gong_ye_zhi_leng_qi
   readableName: "\u5DE5\u4E1A\u5236\u51B7\u5668"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 0dc7168bc50281d4db4ac10a109ba921, type: 3}
   mainDescription: "\u51CF\u5C11\u9AD8\u6E29\u707E\u5BB3\u5BF9\u8D44\u4EA7\u7684\u5F71\u54CD30%"
+  type: 1
   subDescription: "\u51B7\u5E93\u91CC\u5F88\u51C9\u5FEB"
   unlockCost:
     population: 1246

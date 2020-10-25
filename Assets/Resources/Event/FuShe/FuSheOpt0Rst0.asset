@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982bfc52f6204cb78509165186a5ef92, type: 3}
+  m_Name: FuSheOpt0Rst0
+  m_EditorClassIdentifier: 
+  readableName: "\u65E0\u4F5C\u4E3A"
+  substituteDescription: "\u4E8B\u60C5\u5DF2\u7ECF\u8FD9\u6837\u4E86\uFF0C\u53EA\u662F\u628A\u4ED6\u4EEC\u5173\u8D77\u6765\u53C8\u80FD\u6709\u4EC0\u4E48\u4F5C\u7528\u5462\u3002"
+  probability: 1
+  instantOutcome:
+    population: 0
+    populationDelta: 0
+    finance: 0
+    financeDelta: 0
+  buffOutcome:
+    propertyGroup:
+      population: 0
+      populationDelta: 0
+      finance: 0
+      financeDelta: 0
+    activeTurns: 3

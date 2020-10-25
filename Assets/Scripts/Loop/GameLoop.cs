@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using Event;
+﻿using Event;
 using Property;
 using Turn;
 using Turn.Buff;
@@ -41,7 +39,7 @@ namespace Loop {
             State = GameState.Event;
             //OnTransToEvent?.Invoke();
             // todo: Collect prop from map here
-            Debug.LogWarning("Collect prop from map here");
+            Debug.LogWarning("[TODO] Collect prop from map here");
             StartEventLoop();
         }
 

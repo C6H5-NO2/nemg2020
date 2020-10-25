@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982bfc52f6204cb78509165186a5ef92, type: 3}
+  m_Name: HongShuiOpt0Rts1
+  m_EditorClassIdentifier: 
+  readableName: "\u7535\u529B\u6C34\u6CF5"
+  substituteDescription: "\u3010\u7535\u529B\u6C34\u6CF5\u3011\u6211\u4EEC\u7684\u62BD\u6C34\u6CF5\u5F88\u5FEB\u628A\u6D77\u5578\u5E26\u6765\u7684\u6C34\u7ED9\u6E05\u7406\u6389\u4E86\uFF0C\u8FD9\u51CF\u5C11\u4E86\u4E00\u90E8\u5206\u635F\u5931\u3002"
+  probability: 1
+  instantOutcome:
+    population: -50
+    populationDelta: 0
+    finance: -50
+    financeDelta: 0
+  buffOutcome:
+    propertyGroup:
+      population: 0
+      populationDelta: -10
+      finance: 0
+      financeDelta: -10
+    activeTurns: 2

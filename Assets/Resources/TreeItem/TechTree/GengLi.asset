@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 4
   nameid: geng_li
   readableName: "\u8015\u7281"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 016b5694a5ef1434696ba7af0d07cc94, type: 3}
   mainDescription: "\u89E3\u9501\u5EFA\u7B51\u201C\u519C\u7530\u201D"
+  type: 1
   subDescription: "\u4E00\u725B\u8015\u7281\uFF0C\u4E8C\u725B\u62AC\u6760"
   unlockCost:
     population: 161

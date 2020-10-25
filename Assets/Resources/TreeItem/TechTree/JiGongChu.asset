@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 9
   nameid: ji_gong_chu
   readableName: "\u673A\u5DE5\u5904"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 4f4b5fa8be53b4a418c81ae6229caf44, type: 3}
   mainDescription: 
+  type: 1
   subDescription: 
   unlockCost:
     population: 318

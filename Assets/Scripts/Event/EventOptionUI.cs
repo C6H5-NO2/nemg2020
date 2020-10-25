@@ -15,7 +15,7 @@ namespace Event {
             this.parentUI = parentUI;
             this.idx = idx;
             description.text = option.mainDescription;
-            button.interactable = option.wrapper.CanUnlock();
+            button.interactable = option.wrapper.CanUnlock(option);
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(OnClick);
         }

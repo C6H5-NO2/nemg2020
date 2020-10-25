@@ -11,7 +11,20 @@ namespace Event {
             Probability = Sobj.initProbability;
 
             foreach(var option in sobj.options) {
-                option.wrapper = new EventOptionWrapper(option, sobj);
+                var optWrapper = option.wrapper = new EventOptionWrapper(option, sobj);
+                switch(sobj.type) {
+                    case EventType.Policy:
+                        optWrapper.CanUnlock = optSobj => {
+                            var factor = Extension.GetTurnFactor(EventType.Policy);
+                            return PropertyManager.Instance.CanSubtractProperty(optSobj.chooseCost * factor);
+                        };
+                        break;
+                    case EventType.Catastrophe:
+                        optWrapper.CanUnlock = optionSobj => true;
+                        break;
+                    case EventType.Story:
+                        break;
+                }
             }
         }
 

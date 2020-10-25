@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
   m_Name: ZhongDengJiaoYuFa
   m_EditorClassIdentifier: 
-  id: 12
+  id: 59
   nameid: zhong_deng_jiao_yu_fa
   readableName: "\u4E2D\u7B49\u6559\u80B2\u6CD5"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 5ce278b4571122c4c9c1a1ec90caa1b7, type: 3}
   mainDescription: "\u514D\u75AB\u201C\u5B97\u6559\u72C2\u70ED\u884C\u4E3A\u201D"
   subDescription: "\u4E2D\u7B49\u7684\u6559\u80B2\u6CD5"
   unlockCost:

@@ -15,8 +15,9 @@ MonoBehaviour:
   id: 15
   nameid: qing_tong_zhi_gou_jian
   readableName: "\u9752\u94DC\u8D28\u6784\u4EF6"
-  mainImage: {fileID: 0}
+  mainImage: {fileID: 21300000, guid: 60680ac4503511645af71fb761b1eb8c, type: 3}
   mainDescription: "\u589E\u52A0\u653F\u7B56\u6536\u76CA100%"
+  type: 1
   subDescription: "\u9752\u94DC\u662F\u9752\u8272\u7684\u5417"
   unlockCost:
     population: 636

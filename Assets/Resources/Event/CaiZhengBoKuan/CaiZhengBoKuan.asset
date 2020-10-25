@@ -18,7 +18,7 @@ MonoBehaviour:
   mainImage: {fileID: 21300000, guid: 6a89245ef8d295842bc92da139660fca, type: 3}
   mainDescription: "\u4F60\u7684\u5DE5\u7A0B\u5E08\u4EEC\u5411\u4F60\u7533\u8BF7\u7528\u66F4\u591A\u7684\u94B1\u6765\u94FA\u8BBE\u57FA\u7840\u8BBE\u65BD\u3002\u5982\u679C\u4ED6\u4EEC\u6CA1\u6709\u8D2A\u6C61\u7684\u8BDD\uFF0C\u8FD9\u5E94\u8BE5\u53EF\u4EE5\u63D0\u5347\u4E0D\u5C11\u7684\u5DE5\u4F5C\u6548\u7387\u3002"
   type: 0
-  initProbability: 1
+  initProbability: 0.2
   options:
   - {fileID: 11400000, guid: 739c5f0f7c18170458a68d05a4c63c66, type: 2}
   - {fileID: 11400000, guid: f0d644d167a170941b88483f995376b0, type: 2}
