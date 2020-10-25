@@ -1,42 +1,87 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Building;
 using Property;
 using UnityEngine;
 using Util;
 
 namespace Map {
     public class MapManager : ManualSingleton<MapManager> {
-        public MapManager(Vector2Int size) {
-            mapBlocks = new MapBlock[size.x, size.y];
-            MapBlocksEnumerable = mapBlocks.Cast<MapBlock>();
-            for(var x = 0; x < size.x; ++x)
-                for(var y = 0; y < size.y; ++y)
-                    mapBlocks[x, y] = new MapBlock(x, y);
+        public MapManager(MapDescSobj desc) {
+            MapDesc = desc;
         }
 
-        public MapManager(int x, int y) : this(new Vector2Int(x, y)) { }
+        private MapDescSobj mapDesc;
+        public MapDescSobj MapDesc {
+            get => mapDesc;
+            set {
+                mapDesc = value;
+                size = mapDesc.mapSize;
+                map = new MapBlock[size.x, size.y];
+                MapBlocksEnumerable = map.Cast<MapBlock>();
+                OnReset();
+            }
+        }
 
-        public IEnumerable<MapBlock> MapBlocksEnumerable { get; }
 
-        //public MapBlock GetBlock(Vector2Int position) => GetBlock(position.x, position.y);
-        public MapBlock GetBlock(int x, int y)
-            => mapBlocks[x, y];
+        public IEnumerable<MapBlock> MapBlocksEnumerable { get; private set; }
+        private MapBlock[,] map;
+        private Vector2Int size;
 
-        public void AddBlock(int x, int y)
-            => mapBlocks[x, y] = new MapBlock(new Vector2Int(x, y));
+
+        public MapBlock GetBlock(int x, int y) => map[x, y];
+
+        public MapBlock GetBlockBase(int x, int y) {
+            var block = map[x, y];
+            if(block.State == BlockState.OccupiedPartial) {
+                var basePos = block.BasePosition;
+                return map[basePos.x, basePos.y];
+            }
+            return block;
+        }
+
+
+        public bool CanSetBlock(int x, int y, BuildingDescription build) {
+            for(var yy = y; yy < y + build.size.y; ++yy)
+                for(var xx = x; xx < x + build.size.x; ++xx) {
+                    if(xx < 0 || xx >= size.x || yy < 0 || yy >= size.y)
+                        return false;
+                    if(map[xx, yy].State != BlockState.EmptyCanOccupy)
+                        return false;
+                }
+            return true;
+        }
+
+
+        /// <summary> Call this on mouse click </summary>
+        public void SetBlock(int x, int y, BuildingDescription build) {
+            if(!CanSetBlock(x, y, build))
+                return;
+            map[x, y].SetBuilding(build);
+        }
+
+
+        //public bool DemolishBlock(int x, int y) {
+        //    // todo
+        //    return true;
+        //}
+
 
         public PropertyReprGroup CollectProducts() {
             var product = new PropertyReprGroup();
-            foreach(var block in mapBlocks) {
-                if(block is null)
-                    continue;
-                product += block.Product;
+            foreach(var block in map) {
+                if(block.State == BlockState.OccupiedBase)
+                    product += block.Product;
             }
             return product;
         }
 
-        private MapBlock[,] mapBlocks;
 
-        public override void OnReset() { }
+        public sealed override void OnReset() {
+            for(var y = 0; y < size.y; ++y)
+                for(var x = 0; x < size.x; ++x)
+                    map[x, y] = new MapBlock(x, y, mapDesc.blockDescs[x + y * size.x], this);
+            // todo: clear ui colliders
+        }
     }
 }

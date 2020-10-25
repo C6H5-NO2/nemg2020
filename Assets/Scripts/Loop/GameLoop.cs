@@ -85,6 +85,9 @@ namespace Loop {
         // !!! GAME ENTRY FUNCTION !!!
         private void Start() {
             StartNewRound();
+            // other start-ups here
+            SceneObjRef.Instance.MapColliderUtil.ClearColliders();
+            SceneObjRef.Instance.MapColliderUtil.GenerateColliders();
         }
 
         private void StartNewRound() {

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b8dcaa364c3654eba10278c54c4ad2, type: 3}
+  m_Name: ZhuFangLv4
+  m_EditorClassIdentifier: 
+  id: 9
+  nameid: zhu_fang_lv4
+  readableName: "\u697C\u623F"
+  mainImage: {fileID: 21300000, guid: 2912406fbee4d534cb7931110b544a8e, type: 3}
+  mainDescription: 
+  size: {x: 1, y: 2}
+  buildCost:
+    population: 18
+    populationDelta: 0
+    finance: 24
+    financeDelta: 0
+  product:
+    population: 30
+    populationDelta: 0
+    finance: 0
+    financeDelta: 0
+  uiIcon: {fileID: 0}
+  spriteOffset: {x: 0, y: 1.152}
+  initAsLocked: 1
+  tag: 0
+  level: 4
+  nextLevel: {fileID: 11400000, guid: f7f73f7e6840d0149b8291d4cf0e7524, type: 2}

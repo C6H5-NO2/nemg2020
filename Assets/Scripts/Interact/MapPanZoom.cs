@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using Util;
 
 namespace Interact {
-    public class MapInteract : MonoBehaviour {
+    public class MapPanZoom : MonoBehaviour {
         public Camera mainCamera;
         [Header("Pan")] public float moveSpeed = 13;
         public Vector2 moveNegOffset = new Vector2(.1f, .1f);
@@ -12,7 +12,7 @@ namespace Interact {
         public Vector2 moveNegLimit = new Vector2(-28.8f, -28.8f);
         public Vector2 movePosLimit = new Vector2(28.8f, 28.8f);
         [Header("Zoom")] public float zoomSpeed = 2.3f;
-        public Vector2 zoomLimit = new Vector2(4, 15);
+        public Vector2 zoomLimit = new Vector2(4, 15.6f);
 
         public bool AllowClick { get; set; }
 

@@ -1,4 +1,5 @@
 ﻿using Event;
+using Map;
 using UI;
 using UnityEngine;
 
@@ -19,6 +20,9 @@ namespace Util {
         [Header("Event Canvas")] [SerializeField]
         private EventUI eventUI = null;
         public EventUI EventUI => eventUI;
+
+        [Header("Map")] [SerializeField] private MapColliderUtil mapColliderUtil = null;
+        public MapColliderUtil MapColliderUtil => mapColliderUtil;
 
 
         protected override void OnInstanceAwake() { }

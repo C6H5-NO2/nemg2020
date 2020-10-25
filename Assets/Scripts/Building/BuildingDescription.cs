@@ -1,15 +1,21 @@
-﻿using UnityEngine;
+﻿using Property;
+using UnityEngine;
 using Util;
 
 namespace Building {
-    public enum BuildingTag { Empty, ResPoint, Ruin }
+    public enum BuildingTag { Common, MainBase, Ruin, ResourcePoint }
 
-    [CreateAssetMenu(fileName = "BuildingSobj", menuName = "Building/Sobj")]
-    public class BuildingSobj : IdSobj, IUnlockable {
-        public readonly Vector2Int size = Vector2Int.one;
+    [CreateAssetMenu(fileName = "BuildingDescription", menuName = "Building/Description")]
+    public class BuildingDescription : IdSobj, IUnlockable {
+        public Vector2Int size;
+        public PropertyReprGroup buildCost;
+        public PropertyReprGroup product;
         public Sprite uiIcon;
-        public BuildingTag tag;
+        public Vector2 spriteOffset;
         public bool initAsLocked;
+        public BuildingTag tag;
+        public int level;
+        public BuildingDescription nextLevel;
 
         // properties are NOT serialized by default
         public bool Unlocked { get; private set; }

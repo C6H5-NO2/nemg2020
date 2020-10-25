@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b8dcaa364c3654eba10278c54c4ad2, type: 3}
+  m_Name: ZhuJiDiLv1
+  m_EditorClassIdentifier: 
+  id: 1
+  nameid: zhu_ji_di_lv1
+  readableName: "\u4E3B\u57FA\u5730"
+  mainImage: {fileID: 21300000, guid: d1e74a69b9c26c548af6be999478c457, type: 3}
+  mainDescription: 
+  size: {x: 4, y: 4}
+  buildCost:
+    population: 0
+    populationDelta: 0
+    finance: 0
+    financeDelta: 0
+  product:
+    population: 10
+    populationDelta: 0
+    finance: 12
+    financeDelta: 0
+  uiIcon: {fileID: 0}
+  spriteOffset: {x: 3.456, y: 3.456}
+  initAsLocked: 0
+  tag: 1
+  level: 1
+  nextLevel: {fileID: 11400000, guid: ba9b19e0d6229b94099fdb05b7294019, type: 2}

@@ -32,16 +32,16 @@ namespace Util {
             EventManager.CreateInstance();
             TurnCounter.CreateInstance();
             TurnCounter.Instance.OnNewTurn += BuffQueue.Instance.OnNewTurn;
-            MapManager.CreateInstance(4, 5);
+            MapManager.CreateInstance(Resources.Load<MapDescSobj>("Map/Map0"));
 
             // Scriptable Objects
             PropFactorList = Resources.Load<TurnFactorList>("Event/PropertyFactor");
             CatasFactorList = Resources.Load<TurnFactorList>("Event/CatastropheFactor");
-            //LoadBuildingSobjs();
+            LoadBuildingSobjs();
             LoadEventSobjs();
             LoadTreeItemSobjs();
 
-            //InitBuildingSobjs();
+            InitBuildingSobjs();
             InitEventSobjs();
             InitTreeItemSobjs();
         }
@@ -49,14 +49,14 @@ namespace Util {
 
         public TurnFactorList PropFactorList { get; private set; }
         public TurnFactorList CatasFactorList { get; private set; }
-        public NameidSobjDict<BuildingSobj> BuildingDict { get; private set; }
+        public NameidSobjDict<BuildingDescription> BuildingDict { get; private set; }
         public NameidSobjDict<EventSobj> EventDict { get; private set; }
         public NameidSobjDict<TreeItemSobj> TreeItemDict { get; private set; }
 
 
         private void LoadBuildingSobjs() {
-            var sobjs = Resources.LoadAll<BuildingSobj>("Building");
-            BuildingDict = new NameidSobjDict<BuildingSobj>(sobjs);
+            var sobjs = Resources.LoadAll<BuildingDescription>("Building");
+            BuildingDict = new NameidSobjDict<BuildingDescription>(sobjs);
             foreach(var sobj in sobjs) {
                 if(sobj.initAsLocked)
                     sobj.Lock();

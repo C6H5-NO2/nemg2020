@@ -1,40 +1,17 @@
 ﻿using Interact;
+using Map;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
-using Util;
 
-namespace Map {
-    public class MapOnClick : MonoBehaviour {
-        [FormerlySerializedAs("colliderMaster")]
-        public Transform blockMaster;
-        public GameObject blockWrapperPrefab;
+namespace Util {
+    /// <summary> Util for setup data, DO NOT for production </summary>
+    public class ClickSetBlock : MonoBehaviour {
+        public MapDescSobj mapdescsobj;
 
-        public readonly float Side = 2.300f;
-        public readonly float Step = 2.304f;
-        public readonly Vector2Int Num = new Vector2Int(25, 25);
-        public readonly Vector2 BottomLeft = new Vector2(-27.648f, -27.648f);
-
+        private Vector2 mousePos;
         private MainIA mainIA;
         private RaycastHit2D[] targetBlock;
         private int layerMask;
-
-        [ContextMenu("Generate Map Colliders")]
-        public void GenerateColliders() {
-            var pos = BottomLeft;
-            for(var y = 0; y < Num.y; ++y) {
-                for(var x = 0; x < Num.x; ++x) {
-                    var go = Instantiate(blockWrapperPrefab, blockMaster, false);
-                    go.transform.position = pos;
-                    go.name = $"MapBlockCollider {x} {y}";
-                    pos.x += Step;
-                }
-                pos.x = BottomLeft.x;
-                pos.y += Step;
-            }
-        }
-
-        private Vector2 mousePos;
 
         private void OnMove(InputAction.CallbackContext ctx) {
             mousePos = ctx.ReadValue<Vector2>();
@@ -48,7 +25,20 @@ namespace Map {
                 Debug.Log($"F{Time.frameCount} NO HIT");
                 return;
             }
-            Debug.Log($"F{Time.frameCount} {targetBlock[0].transform.name}");
+            var nameof = targetBlock[0].transform.name;
+            var substrs = nameof.Split(' ');
+            var x = int.Parse(substrs[1]);
+            var y = int.Parse(substrs[2]);
+            Debug.Log($"F{Time.frameCount}. ({x}, {y}) = {x + y * 25}");
+            var spr = targetBlock[0].transform.GetComponentInChildren<SpriteRenderer>();
+            if(spr.color.r > .5f) {
+                spr.color = new Color(0, 1, 0, 1);
+                mapdescsobj.blockDescs[x + y * 25].canOccupy = true;
+            }
+            else {
+                spr.color = new Color(1, 1, 1, 0.2f);
+                mapdescsobj.blockDescs[x + y * 25].canOccupy = false;
+            }
         }
 
 
