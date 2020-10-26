@@ -48,7 +48,7 @@ namespace Util {
 
             mainIA = new MainIA();
             mainIA.MapControl.MouseMove.performed += OnMove;
-            mainIA.MapControl.PlaceBlock.performed += OnConfirm;
+            mainIA.MapControl.ConfirmPlaceBlock.performed += OnConfirm;
         }
 
         private void OnEnable() {

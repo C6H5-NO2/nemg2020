@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b8dcaa364c3654eba10278c54c4ad2, type: 3}
+  m_Name: CaiJiZhan
+  m_EditorClassIdentifier: 
+  id: 20
+  nameid: cai_ji_zhan
+  readableName: "\u91C7\u96C6\u7AD9"
+  mainImage: {fileID: 21300000, guid: c3dd751e1b3331d45bcfac751283e181, type: 3}
+  mainDescription: 
+  size: {x: 1, y: 1}
+  buildCost:
+    population: 5
+    populationDelta: 0
+    finance: 5
+    financeDelta: 0
+  product:
+    population: 0
+    populationDelta: 0
+    finance: 5
+    financeDelta: 0
+  uiIcon: {fileID: 0}
+  spriteOffset: {x: 0, y: 0}
+  initAsLocked: 0
+  playerBuildingType: 2
+  tag: 0
+  level: 1
+  nextLevel: {fileID: 0}

@@ -37,7 +37,15 @@ namespace Interact
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""PlaceBlock"",
+                    ""name"": ""MouseMove"",
+                    ""type"": ""Value"",
+                    ""id"": ""fd13ed68-6711-4b5c-8e65-ec4e4b16d4fd"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ConfirmPlaceBlock"",
                     ""type"": ""PassThrough"",
                     ""id"": ""18304ff9-a955-4218-b93b-1c857df1eaab"",
                     ""expectedControlType"": ""Button"",
@@ -45,10 +53,10 @@ namespace Interact
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""MouseMove"",
-                    ""type"": ""Value"",
-                    ""id"": ""fd13ed68-6711-4b5c-8e65-ec4e4b16d4fd"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""name"": ""CancelPlaceBlock"",
+                    ""type"": ""Button"",
+                    ""id"": ""f64eef0d-960a-4a67-ad71-184c0bc7ef9c"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -171,7 +179,7 @@ namespace Interact
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""PlaceBlock"",
+                    ""action"": ""ConfirmPlaceBlock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -182,7 +190,7 @@ namespace Interact
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""PlaceBlock"",
+                    ""action"": ""ConfirmPlaceBlock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -193,7 +201,7 @@ namespace Interact
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
-                    ""action"": ""PlaceBlock"",
+                    ""action"": ""ConfirmPlaceBlock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -205,6 +213,17 @@ namespace Interact
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
                     ""action"": ""MouseMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""199bc928-d66a-48e0-8dad-4446aedd11cd"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardMouse"",
+                    ""action"": ""CancelPlaceBlock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -349,8 +368,9 @@ namespace Interact
             m_MapControl = asset.FindActionMap("MapControl", throwIfNotFound: true);
             m_MapControl_MoveCamera = m_MapControl.FindAction("MoveCamera", throwIfNotFound: true);
             m_MapControl_ZoomCamera = m_MapControl.FindAction("ZoomCamera", throwIfNotFound: true);
-            m_MapControl_PlaceBlock = m_MapControl.FindAction("PlaceBlock", throwIfNotFound: true);
             m_MapControl_MouseMove = m_MapControl.FindAction("MouseMove", throwIfNotFound: true);
+            m_MapControl_ConfirmPlaceBlock = m_MapControl.FindAction("ConfirmPlaceBlock", throwIfNotFound: true);
+            m_MapControl_CancelPlaceBlock = m_MapControl.FindAction("CancelPlaceBlock", throwIfNotFound: true);
             // Player
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
@@ -409,16 +429,18 @@ namespace Interact
         private IMapControlActions m_MapControlActionsCallbackInterface;
         private readonly InputAction m_MapControl_MoveCamera;
         private readonly InputAction m_MapControl_ZoomCamera;
-        private readonly InputAction m_MapControl_PlaceBlock;
         private readonly InputAction m_MapControl_MouseMove;
+        private readonly InputAction m_MapControl_ConfirmPlaceBlock;
+        private readonly InputAction m_MapControl_CancelPlaceBlock;
         public struct MapControlActions
         {
             private @MainIA m_Wrapper;
             public MapControlActions(@MainIA wrapper) { m_Wrapper = wrapper; }
             public InputAction @MoveCamera => m_Wrapper.m_MapControl_MoveCamera;
             public InputAction @ZoomCamera => m_Wrapper.m_MapControl_ZoomCamera;
-            public InputAction @PlaceBlock => m_Wrapper.m_MapControl_PlaceBlock;
             public InputAction @MouseMove => m_Wrapper.m_MapControl_MouseMove;
+            public InputAction @ConfirmPlaceBlock => m_Wrapper.m_MapControl_ConfirmPlaceBlock;
+            public InputAction @CancelPlaceBlock => m_Wrapper.m_MapControl_CancelPlaceBlock;
             public InputActionMap Get() { return m_Wrapper.m_MapControl; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -434,12 +456,15 @@ namespace Interact
                     @ZoomCamera.started -= m_Wrapper.m_MapControlActionsCallbackInterface.OnZoomCamera;
                     @ZoomCamera.performed -= m_Wrapper.m_MapControlActionsCallbackInterface.OnZoomCamera;
                     @ZoomCamera.canceled -= m_Wrapper.m_MapControlActionsCallbackInterface.OnZoomCamera;
-                    @PlaceBlock.started -= m_Wrapper.m_MapControlActionsCallbackInterface.OnPlaceBlock;
-                    @PlaceBlock.performed -= m_Wrapper.m_MapControlActionsCallbackInterface.OnPlaceBlock;
-                    @PlaceBlock.canceled -= m_Wrapper.m_MapControlActionsCallbackInterface.OnPlaceBlock;
                     @MouseMove.started -= m_Wrapper.m_MapControlActionsCallbackInterface.OnMouseMove;
                     @MouseMove.performed -= m_Wrapper.m_MapControlActionsCallbackInterface.OnMouseMove;
                     @MouseMove.canceled -= m_Wrapper.m_MapControlActionsCallbackInterface.OnMouseMove;
+                    @ConfirmPlaceBlock.started -= m_Wrapper.m_MapControlActionsCallbackInterface.OnConfirmPlaceBlock;
+                    @ConfirmPlaceBlock.performed -= m_Wrapper.m_MapControlActionsCallbackInterface.OnConfirmPlaceBlock;
+                    @ConfirmPlaceBlock.canceled -= m_Wrapper.m_MapControlActionsCallbackInterface.OnConfirmPlaceBlock;
+                    @CancelPlaceBlock.started -= m_Wrapper.m_MapControlActionsCallbackInterface.OnCancelPlaceBlock;
+                    @CancelPlaceBlock.performed -= m_Wrapper.m_MapControlActionsCallbackInterface.OnCancelPlaceBlock;
+                    @CancelPlaceBlock.canceled -= m_Wrapper.m_MapControlActionsCallbackInterface.OnCancelPlaceBlock;
                 }
                 m_Wrapper.m_MapControlActionsCallbackInterface = instance;
                 if (instance != null)
@@ -450,12 +475,15 @@ namespace Interact
                     @ZoomCamera.started += instance.OnZoomCamera;
                     @ZoomCamera.performed += instance.OnZoomCamera;
                     @ZoomCamera.canceled += instance.OnZoomCamera;
-                    @PlaceBlock.started += instance.OnPlaceBlock;
-                    @PlaceBlock.performed += instance.OnPlaceBlock;
-                    @PlaceBlock.canceled += instance.OnPlaceBlock;
                     @MouseMove.started += instance.OnMouseMove;
                     @MouseMove.performed += instance.OnMouseMove;
                     @MouseMove.canceled += instance.OnMouseMove;
+                    @ConfirmPlaceBlock.started += instance.OnConfirmPlaceBlock;
+                    @ConfirmPlaceBlock.performed += instance.OnConfirmPlaceBlock;
+                    @ConfirmPlaceBlock.canceled += instance.OnConfirmPlaceBlock;
+                    @CancelPlaceBlock.started += instance.OnCancelPlaceBlock;
+                    @CancelPlaceBlock.performed += instance.OnCancelPlaceBlock;
+                    @CancelPlaceBlock.canceled += instance.OnCancelPlaceBlock;
                 }
             }
         }
@@ -547,8 +575,9 @@ namespace Interact
         {
             void OnMoveCamera(InputAction.CallbackContext context);
             void OnZoomCamera(InputAction.CallbackContext context);
-            void OnPlaceBlock(InputAction.CallbackContext context);
             void OnMouseMove(InputAction.CallbackContext context);
+            void OnConfirmPlaceBlock(InputAction.CallbackContext context);
+            void OnCancelPlaceBlock(InputAction.CallbackContext context);
         }
         public interface IPlayerActions
         {

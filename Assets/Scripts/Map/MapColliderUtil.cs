@@ -27,8 +27,14 @@ namespace Map {
                     go.transform.position = pos;
                     go.name = $"MapBlockCollider {x} {y}";
                     var uiBlock = go.GetComponent<MapBlockUI>();
+                    // comment this line when exec in context menu
                     uiBlocks[x, y] = uiBlock;
                     uiBlock.Position = new Vector2Int(x, y);
+
+                    // bug: debug code
+                    go.transform.GetChild(0).GetComponent<SpriteRenderer>().enabled =
+                        MapManager.Instance.GetBlock(x, y).RelLoc.HasFlag(BlockRelLoc.Common);
+
                     pos.x += Step;
                 }
                 pos.x = BottomLeft.x;

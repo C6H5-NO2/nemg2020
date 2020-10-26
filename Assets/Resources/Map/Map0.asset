@@ -302,7 +302,7 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -329,25 +329,25 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -374,13 +374,13 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -398,34 +398,34 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -446,19 +446,19 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -470,37 +470,37 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -521,19 +521,19 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -545,37 +545,37 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -593,22 +593,22 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -620,37 +620,37 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -668,19 +668,19 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -695,34 +695,34 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -740,22 +740,22 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -770,28 +770,28 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -803,10 +803,10 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -815,22 +815,22 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -845,25 +845,25 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -872,43 +872,43 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -920,70 +920,70 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -992,61 +992,61 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -1067,22 +1067,22 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -1094,28 +1094,28 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -1142,7 +1142,7 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -1172,19 +1172,19 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0
@@ -1247,13 +1247,13 @@ MonoBehaviour:
   - canOccupy: 0
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
-  - canOccupy: 0
+  - canOccupy: 1
     isCoast: 0
     isRiverBank: 0
   - canOccupy: 0

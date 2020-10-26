@@ -44,6 +44,9 @@ namespace Util {
             InitBuildingSobjs();
             InitEventSobjs();
             InitTreeItemSobjs();
+
+            // Building Levels
+            BuildingLevels.CreateInstance(BuildingDict);
         }
 
 

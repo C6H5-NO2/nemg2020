@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b8dcaa364c3654eba10278c54c4ad2, type: 3}
+  m_Name: NongTianLv2
+  m_EditorClassIdentifier: 
+  id: 12
+  nameid: nong_tian_lv2
+  readableName: "\u6C34\u7530"
+  mainImage: {fileID: 21300000, guid: 9e2d7a4f298533f43920b813ec475567, type: 3}
+  mainDescription: 
+  size: {x: 4, y: 4}
+  buildCost:
+    population: 20
+    populationDelta: 0
+    finance: 24
+    financeDelta: 0
+  product:
+    population: 0
+    populationDelta: 0
+    finance: 36
+    financeDelta: 0
+  uiIcon: {fileID: 0}
+  spriteOffset: {x: 3.456, y: 3.456}
+  initAsLocked: 1
+  playerBuildingType: 3
+  tag: 0
+  level: 2
+  nextLevel: {fileID: 11400000, guid: 36e89ec572fc49449b9aa834bd361387, type: 2}

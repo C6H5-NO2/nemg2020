@@ -6,15 +6,13 @@ namespace Interact {
     public class MapPanZoom : MonoBehaviour {
         public Camera mainCamera;
         [Header("Pan")] public float moveSpeed = 13;
-        public Vector2 moveNegOffset = new Vector2(.1f, .1f);
-        public Vector2 movePosOffset = new Vector2(.9f, .9f);
+        public Vector2 moveNegOffset = new Vector2(.02f, .02f);
+        public Vector2 movePosOffset = new Vector2(.98f, .98f);
         /// <summary> The max pos camera can see. NOT the max camera pos. </summary>
         public Vector2 moveNegLimit = new Vector2(-28.8f, -28.8f);
         public Vector2 movePosLimit = new Vector2(28.8f, 28.8f);
         [Header("Zoom")] public float zoomSpeed = 2.3f;
         public Vector2 zoomLimit = new Vector2(4, 15.6f);
-
-        public bool AllowClick { get; set; }
 
 
         private Vector2 mousePos;

@@ -31,6 +31,7 @@ MonoBehaviour:
   uiIcon: {fileID: 0}
   spriteOffset: {x: 0, y: 1.152}
   initAsLocked: 1
+  playerBuildingType: 1
   tag: 0
   level: 4
   nextLevel: {fileID: 11400000, guid: f7f73f7e6840d0149b8291d4cf0e7524, type: 2}

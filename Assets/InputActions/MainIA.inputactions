@@ -22,7 +22,15 @@
                     "interactions": ""
                 },
                 {
-                    "name": "PlaceBlock",
+                    "name": "MouseMove",
+                    "type": "Value",
+                    "id": "fd13ed68-6711-4b5c-8e65-ec4e4b16d4fd",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ConfirmPlaceBlock",
                     "type": "PassThrough",
                     "id": "18304ff9-a955-4218-b93b-1c857df1eaab",
                     "expectedControlType": "Button",
@@ -30,10 +38,10 @@
                     "interactions": ""
                 },
                 {
-                    "name": "MouseMove",
-                    "type": "Value",
-                    "id": "fd13ed68-6711-4b5c-8e65-ec4e4b16d4fd",
-                    "expectedControlType": "Vector2",
+                    "name": "CancelPlaceBlock",
+                    "type": "Button",
+                    "id": "f64eef0d-960a-4a67-ad71-184c0bc7ef9c",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -156,7 +164,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "PlaceBlock",
+                    "action": "ConfirmPlaceBlock",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -167,7 +175,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "PlaceBlock",
+                    "action": "ConfirmPlaceBlock",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -178,7 +186,7 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "PlaceBlock",
+                    "action": "ConfirmPlaceBlock",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -190,6 +198,17 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "MouseMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "199bc928-d66a-48e0-8dad-4446aedd11cd",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "CancelPlaceBlock",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

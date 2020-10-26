@@ -16,7 +16,7 @@ MonoBehaviour:
   nameid: fan_zui_fen_wei
   readableName: "\u72AF\u7F6A\u6C1B\u56F4"
   mainImage: {fileID: 21300000, guid: 7fa734bb9fc71a94d8501e32db8600c7, type: 3}
-  mainDescription: "\u57CE\u5E02\u7684\u6CBB\u5B89\u9010\u6E10\u53D8\u5F97\u61D2\u6563\u8D77\u6765\uFF0C\u4EBA\u4EEC\u7684\u72AF\u7F6A\u6B32\u671B\u5728\u8822\u8822\u6B32\u52A8\u3002"
+  mainDescription: "        \u57CE\u5E02\u7684\u6CBB\u5B89\u9010\u6E10\u53D8\u5F97\u61D2\u6563\u8D77\u6765\uFF0C\u4EBA\u4EEC\u7684\u72AF\u7F6A\u6B32\u671B\u5728\u8822\u8822\u6B32\u52A8\u3002"
   type: 1
   initProbability: 0.01
   options:

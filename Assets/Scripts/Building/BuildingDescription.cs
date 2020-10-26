@@ -13,6 +13,7 @@ namespace Building {
         public Sprite uiIcon;
         public Vector2 spriteOffset;
         public bool initAsLocked;
+        public PlayerBuildingType playerBuildingType;
         public BuildingTag tag;
         public int level;
         public BuildingDescription nextLevel;
