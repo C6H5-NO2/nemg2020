@@ -1,6 +1,7 @@
 ﻿using System;
 using Building;
 using Event;
+using Loop;
 using Map;
 using Property;
 using Tree;
@@ -201,7 +202,7 @@ namespace Util {
             EventDict["bao_yu"].options[0].results[1].wrapper.CanTrigger =
                 delegate {
                     return /*!TreeItemDict["dian_li_shui_beng"].wrapper.Unlocked &&*/
-                        TreeItemDict["shui_beng"].wrapper.Unlocked;
+                        TreeItemDict["chou_shui_beng"].wrapper.Unlocked;
                 };
             EventDict["bao_yu"].options[0].results[1].wrapper.OnTrigger =
                 result => EventResultWrapper.PropOnTrigger(result, .2f);
@@ -278,6 +279,17 @@ namespace Util {
             };
 
 
+            // 故事：复苏的火种
+            EventDict["fu_su_de_huo_zhong"].options[0].results[0].wrapper.OnTrigger = result => {
+                result.EventSource.wrapper.Probability = 0;
+            };
+
+            // 故事：离去
+            EventDict["li_qu"].options[0].results[0].wrapper.OnTrigger = result => {
+                SceneObjRef.Instance.EventUI.ForceEndProcess();
+                GameLoop.Instance.StartNewRound();
+            };
+
             // todo: other events
         }
 
@@ -292,35 +304,90 @@ namespace Util {
         }
 
         private void InitTreeItemSobjs() {
-            // todo: check in themselves instead since TreeItem has state
+            // ---- Tech ----
             // lv1
-            //TreeItemDict["sun_mao_jie_gou"].wrapper.onUnlocked = _ => BuildingDict["mu_wu"].ForceUnlock();
-            TreeItemDict["jian_zhu_xia_shui"].wrapper.onUnlocked =
-                _ => throw new NotImplementedException("jian_zhu_xia_shui unlock callback");
-            //TreeItemDict["geng_li"].wrapper.onUnlocked = _ => BuildingDict["nong_tian"].ForceUnlock();
-            TreeItemDict["cha_yu_yan"].wrapper.onUnlocked = _ => {
+            TreeItemDict["sun_mao_jie_gou"].wrapper.onUnlocked = delegate {
+                BuildingDict["zhu_fang_lv2"].ForceUnlock();
+                BuildingLevels.Instance.Upgrade(PlayerBuildingType.ZhuFang);
+            };
+            TreeItemDict["geng_li"].wrapper.onUnlocked = delegate { BuildingDict["nong_tian_lv1"].ForceUnlock(); };
+            TreeItemDict["cha_yu_yan"].wrapper.onUnlocked = delegate {
                 var delta = PropertyManager.Instance.GameProp[PropertyType.PopulationDelta] * .2f;
                 var prop = new PropertyRepr(PropertyType.PopulationDelta, (int)delta);
                 PropertyManager.Instance.AddProperty(prop);
             };
-            //TreeItemDict["ji_chu_ji_xie"].wrapper.onUnlocked = _ => BuildingDict["kuang_jing"].ForceUnlock();
-            TreeItemDict["mu_zhi_shui_ba"].wrapper.onUnlocked =
-                _ => throw new NotImplementedException("mu_zhi_shui_ba unlock callback");
-            TreeItemDict["chuan_tong_liao_fa"].wrapper.onUnlocked =
-                _ => throw new NotImplementedException("chuan_tong_liao_fa unlock callback");
+            TreeItemDict["ji_chu_ji_xie"].wrapper.onUnlocked = delegate {
+                BuildingDict["kuang_jing_lv1"].ForceUnlock();
+            };
             // lv2
-            //TreeItemDict["zhuan_hun_jie_gou"].wrapper.onUnlocked = _ => BuildingDict["zhuan_lou"].ForceUnlock();
-            TreeItemDict["jian_zhu_bao_wen"].wrapper.onUnlocked =
-                _ => throw new NotImplementedException("jian_zhu_bao_wen unlock callback");
-            //TreeItemDict["cha_yang"].wrapper.onUnlocked = _ => BuildingDict["shui_tian"].ForceUnlock();
-            // todo
-            TreeItemDict["feng_dong_li"].wrapper.onUnlocked = null;
-            TreeItemDict["zhong_gu_ji_xie"].wrapper.onUnlocked = null;
-            TreeItemDict["qing_tong_zhi_gou_jian"].wrapper.onUnlocked = null;
-            TreeItemDict["hun_ning_shui_ba"].wrapper.onUnlocked = null;
-            TreeItemDict["chou_shui_beng"].wrapper.onUnlocked = null;
-            TreeItemDict["yi_liao_ji_gou"].wrapper.onUnlocked = null;
+            TreeItemDict["zhuan_hun_jie_gou"].wrapper.onUnlocked = delegate {
+                BuildingDict["zhu_fang_lv3"].ForceUnlock();
+                BuildingLevels.Instance.Upgrade(PlayerBuildingType.ZhuFang);
+            };
+            TreeItemDict["cha_yang"].wrapper.onUnlocked = delegate {
+                BuildingDict["nong_tian_lv2"].ForceUnlock();
+                BuildingLevels.Instance.Upgrade(PlayerBuildingType.NongTian);
+            };
             // lv3
+            TreeItemDict["gang_hun_jie_gou"].wrapper.onUnlocked = delegate {
+                BuildingDict["zhu_fang_lv4"].ForceUnlock();
+                BuildingLevels.Instance.Upgrade(PlayerBuildingType.ZhuFang);
+            };
+            TreeItemDict["li_ti_nong_ye"].wrapper.onUnlocked = delegate {
+                BuildingDict["nong_tian_lv3"].ForceUnlock();
+                BuildingLevels.Instance.Upgrade(PlayerBuildingType.NongTian);
+            };
+            // lv4
+            TreeItemDict["gang_jie_gou"].wrapper.onUnlocked = delegate {
+                BuildingDict["zhu_fang_lv5"].ForceUnlock();
+                BuildingLevels.Instance.Upgrade(PlayerBuildingType.ZhuFang);
+            };
+            TreeItemDict["da_xing_nong_yong_ji_xie"].wrapper.onUnlocked = delegate {
+                BuildingDict["nong_tian_lv4"].ForceUnlock();
+                BuildingLevels.Instance.Upgrade(PlayerBuildingType.NongTian);
+            };
+            TreeItemDict["ci_li_xian_quan"].wrapper.onUnlocked = delegate {
+                BuildingDict["fa_dian_zhan"].ForceUnlock();
+            };
+            // ---- Culture ----
+            // lv1
+            TreeItemDict["yin_you_ge_zhe"].wrapper.onUnlocked = delegate {
+                var delta = PropertyManager.Instance.GameProp[PropertyType.PopulationDelta] * .2f;
+                var prop = new PropertyRepr(PropertyType.PopulationDelta, (int)delta);
+                PropertyManager.Instance.AddProperty(prop);
+            };
+            TreeItemDict["huo_bi"].wrapper.onUnlocked = delegate {
+                var delta = PropertyManager.Instance.GameProp[PropertyType.FinanceDelta] * .3f;
+                var prop = new PropertyRepr(PropertyType.FinanceDelta, (int)delta);
+                PropertyManager.Instance.AddProperty(prop);
+            };
+            // lv2
+            TreeItemDict["yun_dong_hui"].wrapper.onUnlocked = delegate {
+                var delta = PropertyManager.Instance.GameProp[PropertyType.PopulationDelta] * .1f;
+                var prop = new PropertyRepr(PropertyType.PopulationDelta, (int)delta);
+                PropertyManager.Instance.AddProperty(prop);
+            };
+            TreeItemDict["xue_yuan"].wrapper.onUnlocked = delegate {
+                var delta = PropertyManager.Instance.GameProp[PropertyType.FinanceDelta] * .1f;
+                var prop = new PropertyRepr(PropertyType.FinanceDelta, (int)delta);
+                PropertyManager.Instance.AddProperty(prop);
+            };
+            // lv3
+            TreeItemDict["yin_yue_guang_chang"].wrapper.onUnlocked = delegate {
+                var delta = PropertyManager.Instance.GameProp[PropertyType.PopulationDelta] * .1f;
+                var prop = new PropertyRepr(PropertyType.PopulationDelta, (int)delta);
+                PropertyManager.Instance.AddProperty(prop);
+            };
+            // lv4
+            TreeItemDict["quan_min_kuang_huan"].wrapper.onUnlocked = delegate {
+                var delta = PropertyManager.Instance.GameProp[PropertyType.PopulationDelta] * .1f;
+                var prop = new PropertyRepr(PropertyType.PopulationDelta, (int)delta);
+                PropertyManager.Instance.AddProperty(prop);
+            };
+            // lv5
+            TreeItemDict["li_xiang_she_hui"].wrapper.onUnlocked = delegate {
+                SceneObjRef.Instance.MainMenuCanvas.gameObject.SetActive(true);
+            };
         }
     }
 }

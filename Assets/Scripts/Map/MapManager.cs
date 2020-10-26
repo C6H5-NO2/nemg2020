@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Building;
 using Property;
@@ -14,7 +15,7 @@ namespace Map {
         private MapDescSobj mapDesc;
         public MapDescSobj MapDesc {
             get => mapDesc;
-            set {
+            private set {
                 mapDesc = value;
                 size = mapDesc.mapSize;
                 map = new MapBlock[size.x, size.y];
@@ -70,8 +71,43 @@ namespace Map {
         public PropertyReprGroup CollectProducts() {
             var product = new PropertyReprGroup();
             foreach(var block in map) {
-                if(block.State == BlockState.OccupiedBase)
-                    product += block.Product;
+                if(block.State != BlockState.OccupiedBase)
+                    continue;
+                var buildType = block.Building.playerBuildingType;
+                if(buildType == PlayerBuildingType.Other)
+                    continue;
+                var treeDict = SobjRef.Instance.TreeItemDict;
+                var baseProduct = block.Product;
+                var scale = 1.0f;
+                switch(buildType) {
+                    case PlayerBuildingType.ZhuJiDi:
+                        break;
+                    case PlayerBuildingType.ZhuFang:
+                        break;
+                    case PlayerBuildingType.CaiJiZhan:
+                        break;
+                    case PlayerBuildingType.NongTian:
+                        if(treeDict["feng_dong_li"].wrapper.Unlocked)
+                            scale *= 1.2f;
+                        if(treeDict["chuan_dong_ji_xie"].wrapper.Unlocked)
+                            scale *= 1.2f;
+                        if(treeDict["jing_mi_ji_xie"].wrapper.Unlocked)
+                            scale *= 1.2f;
+                        break;
+                    case PlayerBuildingType.KuangJing:
+                        if(treeDict["zhong_gu_ji_xie"].wrapper.Unlocked)
+                            scale *= 2;
+                        if(treeDict["zheng_qi_ji"].wrapper.Unlocked)
+                            scale *= 2;
+                        if(treeDict["qi_you_ji"].wrapper.Unlocked)
+                            scale *= 1.5f;
+                        break;
+                    case PlayerBuildingType.KeYanJianZhu:
+                        break;
+                    case PlayerBuildingType.FaDianZhan:
+                        break;
+                }
+                product += baseProduct * scale;
             }
             return product;
         }

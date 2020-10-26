@@ -1,4 +1,6 @@
-﻿using Event;
+﻿using System.Collections.Generic;
+using Event;
+using Map;
 using Property;
 using Turn;
 using Turn.Buff;
@@ -17,8 +19,11 @@ namespace Loop {
         /// Debug play
         //////////////////////////////////////////////
         private void Update() {
-            if(Input.GetKeyDown(KeyCode.P)) {
+            if(Input.GetKeyDown(KeyCode.Equals)) {
                 PropertyManager.Instance.AddProperty(new PropertyReprGroup(50, 0, 50, 0));
+            }
+            else if(Input.GetKeyDown(KeyCode.Minus)) {
+                PropertyManager.Instance.SubtractProperty(new PropertyReprGroup(50, 0, 50, 0));
             }
             else if(Input.GetKeyDown(KeyCode.Escape)) {
                 Application.Quit();
@@ -38,8 +43,10 @@ namespace Loop {
         #endif
             State = GameState.Event;
             //OnTransToEvent?.Invoke();
-            // todo: Collect prop from map here
-            Debug.LogWarning("[TODO] Collect prop from map here");
+
+            // collect prop from map here
+            PropertyManager.Instance.AddProperty(MapManager.Instance.CollectProducts());
+
             StartEventLoop();
         }
 
@@ -47,7 +54,6 @@ namespace Loop {
             var eventUI = SceneObjRef.Instance.EventUI;
             eventUI.gameObject.SetActive(true);
 
-            // bug: debug code
             EventManager.Instance.GenerateEvents();
 
             eventUI.StartProcess();
@@ -65,9 +71,8 @@ namespace Loop {
         #endif
             State = GameState.Map;
             //OnTransToMap?.Invoke();
-            // bug: ???
             // activate main UI
-            SceneObjRef.Instance.MainCanvas.gameObject.SetActive(true);
+            SceneObjRef.Instance.GameCanvas.gameObject.SetActive(true);
             TurnCounter.Instance.NewTurn();
         }
 
@@ -83,24 +88,62 @@ namespace Loop {
 
 
         // !!! GAME ENTRY FUNCTION !!!
-        private void Start() {
+        public void StartNewGame() {
             StartNewRound();
-            // other start-ups here
-            SceneObjRef.Instance.MapColliderUtil.ClearColliders();
-            SceneObjRef.Instance.MapColliderUtil.GenerateColliders();
         }
 
-        private void StartNewRound() {
+        public void StartNewRound() {
+            var refs = SceneObjRef.Instance;
+            refs.MainMenuCanvas.gameObject.SetActive(false);
+            refs.GameCanvas.gameObject.SetActive(true);
+            refs.OverlayCanvas.gameObject.SetActive(true);
+            refs.EventCanvas.gameObject.SetActive(false);
+            refs.TechTreeCanvas.gameObject.SetActive(false);
+            refs.CultureTreeCanvas.gameObject.SetActive(false);
+
             ++round;
-            Debug.Log($"New Round: {round}");
 
             PropertyManager.Instance.OnReset();
             BuffQueue.Instance.OnReset();
             TurnCounter.Instance.OnReset();
             //TurnCounter.Instance.OnNewTurn += BuffQueue.Instance.OnNewTurn;
+            EventManager.Instance.OnReset();
+            // other start-ups here
+            SceneObjRef.Instance.MapColliderUtil.ClearColliders();
+            SceneObjRef.Instance.MapColliderUtil.GenerateColliders();
 
-            // todo: add start event & trans to event
-            //TransToMap();
+            // add start event & trans to event
+            var evDict = SobjRef.Instance.EventDict;
+            EventManager.Instance.AddEventToFront(evDict["fu_su_de_huo_zhong"].wrapper);
+
+            // special handling of turn 0
+            State = GameState.Event;
+            // setup main base
+            var buildDict = SobjRef.Instance.BuildingDict;
+            var mainBase = buildDict["zhu_ji_di_lv1"];
+            var mapManager = MapManager.Instance;
+            var mapSize = mapManager.MapDesc.mapSize;
+            var poss = new List<Vector2Int>(mapSize.x * mapSize.y);
+            for(var y = 0; y < mapSize.y; ++y) {
+                for(var x = 0; x < mapSize.x; ++x) {
+                    if(mapManager.CanSetBlock(x, y, mainBase)) {
+                        poss.Add(new Vector2Int(x, y));
+                    }
+                }
+            }
+            var randIdx = Random.Range(0, poss.Count);
+            var randPos = poss[randIdx];
+            mapManager.SetBlock(randPos.x, randPos.y, mainBase);
+            SceneObjRef.Instance.MapColliderUtil.GetUIBlock(randPos.x, randPos.y)
+                       .SetSprite(mainBase.mainImage, mainBase.spriteOffset);
+
+            var initProp = MapManager.Instance.CollectProducts();
+            initProp += new PropertyReprGroup(100, 10, 100, 10);
+            PropertyManager.Instance.AddProperty(initProp);
+
+            var eventUI = SceneObjRef.Instance.EventUI;
+            eventUI.gameObject.SetActive(true);
+            eventUI.StartProcess();
         }
     }
 }

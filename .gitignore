@@ -48,6 +48,8 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Addition
+Assets/Audios.meta
+Assets/Audios
 Assets/Fonts.meta
 Assets/Fonts/
 Assets/Plugins.meta

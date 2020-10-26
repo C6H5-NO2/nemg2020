@@ -31,7 +31,7 @@ namespace Event {
             }
         }
 
-        private EventQueue eventQueue;
+        private readonly EventQueue eventQueue;
 
         public override void OnReset() {
             eventQueue.Clear();

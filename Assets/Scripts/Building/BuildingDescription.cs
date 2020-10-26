@@ -1,4 +1,5 @@
-﻿using Property;
+﻿using Map;
+using Property;
 using UnityEngine;
 using Util;
 
@@ -30,7 +31,14 @@ namespace Building {
 
         public void ForceUnlock() {
             Unlocked = true;
-            // todo: add call back to map
+            if(playerBuildingType == PlayerBuildingType.Other)
+                return;
+            foreach(var block in MapManager.Instance.MapBlocksEnumerable) {
+                if(block.State != BlockState.OccupiedBase)
+                    continue;
+                if(block.Building.playerBuildingType == playerBuildingType)
+                    block.SetBuilding(this);
+            }
         }
 
         public void Lock() {

@@ -1,4 +1,5 @@
 ﻿using Loop;
+using Property;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -112,6 +113,17 @@ namespace Event {
         }
 
         // called when failed
-        public void ForceEndProcess() { }
+        public void ForceEndProcess() {
+            // clear queue
+            // clear by GameLoop
+            //EventManager.Instance.Clear()
+
+            // disable canvas
+            gameObject.SetActive(false);
+            // clean up TMP
+            title.text = "";
+            mainDesc.text = "";
+            mainImage.sprite = null;
+        }
     }
 }

@@ -30,7 +30,7 @@ MonoBehaviour:
     financeDelta: 0
   uiIcon: {fileID: 0}
   spriteOffset: {x: 3.456, y: 3.456}
-  initAsLocked: 0
+  initAsLocked: 1
   playerBuildingType: 3
   tag: 0
   level: 1

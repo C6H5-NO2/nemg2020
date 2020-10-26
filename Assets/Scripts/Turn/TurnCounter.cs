@@ -19,8 +19,7 @@ namespace Turn {
         }
 
         public override void OnReset() {
-            TurnCount = 1;
-            // todo: set to 0 in release!!!
+            TurnCount = 0;
             //OnNewTurn = null;
         }
     }

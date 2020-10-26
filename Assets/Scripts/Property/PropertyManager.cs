@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Event;
+using UnityEngine;
 using Util;
 
 namespace Property {
@@ -19,6 +20,12 @@ namespace Property {
                     var ui = ins.GamePropUI;
                     if(ui != null)
                         ui.UpdateText();
+                }
+
+                if(gameProp[PropertyType.Population] < 0 || gameProp[PropertyType.Finance] < 0) {
+                    var evDict = SobjRef.Instance.EventDict;
+                    EventManager.Instance.AddEventToFront(evDict["li_qu"].wrapper);
+                    // todo: currently < 0 can only be caused by event
                 }
             }
         }

@@ -67,17 +67,17 @@ namespace Map {
         }
 
 
-        /// <summary> only valid when <c>Tag</c> is <c>OccupiedBase</c>. </summary>
+        /// <summary> only valid when <c>State</c> is <c>OccupiedBase</c>. </summary>
         public PropertyReprGroup Product { get; private set; }
 
         //public void SetFactor(float factor) => Product *= factor;
 
 
-        /// <summary> only valid when <c>Tag</c> is <c>OccupiedBase</c>. </summary>
+        /// <summary> only valid when <c>State</c> is <c>OccupiedBase</c>. </summary>
         public BuildingDescription Building { get; private set; }
 
 
-        /// <summary> only valid when <c>Tag</c> is <c>OccupiedPartial</c>. </summary>
+        /// <summary> only valid when <c>State</c> is <c>OccupiedPartial</c>. </summary>
         public Vector2Int BasePosition { get; private set; }
     }
 }

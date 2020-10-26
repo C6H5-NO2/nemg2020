@@ -88,8 +88,8 @@ namespace Interact {
                 return;
             }
 
-            MapManager.Instance.SetBlock(x, y, build);
             PropertyManager.Instance.SubtractProperty(build.buildCost);
+            MapManager.Instance.SetBlock(x, y, build);
             SceneObjRef.Instance.MapColliderUtil.GetUIBlock(x, y).SetSprite(build.mainImage, build.spriteOffset);
             //Debug.Log($"[Map Click] set {x}, {y}");
 

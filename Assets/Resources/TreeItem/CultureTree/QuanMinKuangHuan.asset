@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ca12bc351ceaed458b3f89a6fd5b39a, type: 3}
-  m_Name: QuanMingKuangHuan
+  m_Name: QuanMinKuangHuan
   m_EditorClassIdentifier: 
   id: 50
-  nameid: quan_ming_kuang_huan
+  nameid: quan_min_kuang_huan
   readableName: "\u5168\u6C11\u72C2\u6B22"
   mainImage: {fileID: 21300000, guid: b884ccd2e0b86fa4c939cbb3d22f42c4, type: 3}
   mainDescription: "\u4EBA\u529B\u589E\u91CF+=\u5F53\u524D\u4EBA\u529B\u589E\u91CF*10%"
+  type: 0
   subDescription: "\u829C\u6E56"
   unlockCost:
     population: 6367
