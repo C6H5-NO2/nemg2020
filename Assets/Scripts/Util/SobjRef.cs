@@ -133,13 +133,8 @@ namespace Util {
                 Debug.LogWarning("[TODO] 洪水 > 破坏建筑");
             };
             // rst0: 水坝; rst1: 电力水泵 rst2: 抽水泵; rst3: 破坏; 
-            EventDict["hong_shui"].options[0].results[0].wrapper.CanTrigger = delegate {
-                var flag = false;
-                // Map.has("shui_ba")
-                // todo: 洪水 > 建造水坝后免疫
-                Debug.LogWarning("[TODO] 洪水 > 建造水坝后免疫");
-                return flag;
-            };
+            EventDict["hong_shui"].options[0].results[0].wrapper.CanTrigger =
+                delegate { return TreeItemDict["mu_zhi_shui_ba"]; };
             EventDict["hong_shui"].options[0].results[0].wrapper.OnTrigger = delegate { };
             EventDict["hong_shui"].options[0].results[1].wrapper.CanTrigger =
                 delegate { return TreeItemDict["dian_li_shui_beng"].wrapper.Unlocked; };
@@ -167,13 +162,8 @@ namespace Util {
                 Debug.LogWarning("[TODO] 海啸 > 破坏建筑");
             };
             // rst0: 高级水坝; rst1: 电力水泵 rst2: 抽水泵; rst3: 破坏; 
-            EventDict["hai_xiao"].options[0].results[0].wrapper.CanTrigger = delegate {
-                var flag = false;
-                // Map.has("gao_ji_shui_ba")
-                // todo: 海啸 > 建造高级水坝后免疫
-                Debug.LogWarning("[TODO] 海啸 > 建造高级水坝后免疫");
-                return flag;
-            };
+            EventDict["hai_xiao"].options[0].results[0].wrapper.CanTrigger =
+                delegate { return TreeItemDict["hun_ning_shui_ba"]; };
             EventDict["hai_xiao"].options[0].results[0].wrapper.OnTrigger = delegate { };
             EventDict["hai_xiao"].options[0].results[1].wrapper.CanTrigger =
                 delegate { return TreeItemDict["dian_li_shui_beng"].wrapper.Unlocked; };
@@ -235,10 +225,10 @@ namespace Util {
 
             // 酷暑 > 散热涂料免疫
             EventDict["ku_shu"].options[0].results[0].wrapper.CanTrigger = delegate {
-                return !TreeItemDict["san_re_tu_liao"].wrapper.Unlocked;
+                return !TreeItemDict["ge_re_tu_liao"].wrapper.Unlocked;
             };
             EventDict["ku_shu"].options[0].results[1].wrapper.CanTrigger = delegate {
-                return TreeItemDict["san_re_tu_liao"].wrapper.Unlocked;
+                return TreeItemDict["ge_re_tu_liao"].wrapper.Unlocked;
             };
 
 
@@ -271,12 +261,91 @@ namespace Util {
                 Debug.LogWarning("[TODO] 实验失败 > 禁用实验室 4");
             };
 
-
             // 辐射
             EventDict["fu_she"].options[0].results[0].wrapper.OnTrigger = result => {
-                // todo: 辐射 > 【-Δ0.5资产】*资产生产建筑数量 持续回合：3
-                Debug.LogWarning("[TODO] 辐射 > 【-Δ0.5资产】*资产生产建筑数量 持续回合：3");
+                var cnt = 0;
+                foreach(var block in MapManager.Instance.MapBlocksEnumerable) {
+                    if(block.State != BlockState.OccupiedBase)
+                        continue;
+                    if(block.Building.playerBuildingType != PlayerBuildingType.Other)
+                        ++cnt;
+                }
+                var finance = -(int)(cnt * 0.5f * Extension.GetTurnFactor(EventType.Catastrophe));
+                var dec = new PropertyBuff(new PropertyReprGroup(finance: finance), 3);
+                BuffQueue.Instance.Add(dec);
             };
+
+            // 传染性事件
+
+
+            // 压抑气氛 > 音乐狂欢节免疫
+            EventDict["ya_yi_qi_fen"].options[0].results[0].wrapper.CanTrigger = delegate {
+                return !TreeItemDict["yin_yue_kuang_huan_jie"].wrapper.Unlocked;
+            };
+            EventDict["ya_yi_qi_fen"].options[0].results[1].wrapper.CanTrigger = delegate {
+                return TreeItemDict["yin_yue_kuang_huan_jie"].wrapper.Unlocked;
+            };
+
+            // 犯罪气氛 > 警察机关免疫
+            EventDict["fan_zui_qi_fen"].options[0].results[0].wrapper.CanTrigger = delegate {
+                return !TreeItemDict["jing_cha_ji_guan"].wrapper.Unlocked;
+            };
+            EventDict["fan_zui_qi_fen"].options[0].results[1].wrapper.CanTrigger = delegate {
+                return TreeItemDict["jing_cha_ji_guan"].wrapper.Unlocked;
+            };
+
+            // 机器过载
+            EventDict["ji_qi_guo_zai"].options[0].wrapper.OnSelected = option => {
+                // Map.dealDamage(type)
+                // todo: 机器过载 > 破坏建筑
+                Debug.LogWarning("[TODO] 机器过载 > 破坏建筑");
+            };
+            EventDict["ji_qi_guo_zai"].options[0].results[0].wrapper.CanTrigger = delegate {
+                return !TreeItemDict["zhi_leng_qi"].wrapper.Unlocked;
+            };
+            EventDict["ji_qi_guo_zai"].options[0].results[1].wrapper.CanTrigger = delegate {
+                return TreeItemDict["zhi_leng_qi"].wrapper.Unlocked;
+            };
+
+            // 官僚体系
+            EventDict["guan_liao_ti_xi"].options[0].results[0].wrapper.CanTrigger = delegate {
+                return !TreeItemDict["zhong_yang_wei_yuan_hui"].wrapper.Unlocked;
+            };
+            EventDict["guan_liao_ti_xi"].options[0].results[1].wrapper.CanTrigger = delegate {
+                return TreeItemDict["zhong_yang_wei_yuan_hui"].wrapper.Unlocked;
+            };
+
+            // 住宅倒塌
+            // rst0: 钢结构 rst1: 砖混结构; rst2: 最坏; 
+            EventDict["zhu_zhai_dao_ta"].options[0].results[0].wrapper.CanTrigger =
+                delegate { return TreeItemDict["gang_jie_gou"].wrapper.Unlocked; };
+            EventDict["zhu_zhai_dao_ta"].options[0].results[1].wrapper.CanTrigger =
+                delegate {
+                    return /*!TreeItemDict["gang_jie_gou"].wrapper.Unlocked &&*/
+                        TreeItemDict["zhuan_hun_jie_gou"].wrapper.Unlocked;
+                };
+
+            // 罢工
+            EventDict["ba_gong"].options[2].wrapper.CanUnlock =
+                option => TreeItemDict["zu_zhi_wei_yuan_hui"].wrapper.Unlocked;
+            // switch to ba_gong2
+            // todo: add event trigger callback
+            EventDict["ba_gong"].options[0].wrapper.OnSelected = option => {
+                EventDict["ba_gong"].wrapper.Probability = 0;
+                EventDict["ba_gong2"].wrapper.Probability = EventDict["ba_gong"].initProbability;
+            };
+            EventDict["ba_gong"].options[1].wrapper.OnSelected = option => {
+                EventDict["ba_gong"].wrapper.Probability = 0;
+                EventDict["ba_gong2"].wrapper.Probability = EventDict["ba_gong"].initProbability;
+            };
+            EventDict["ba_gong"].options[2].wrapper.OnSelected = option => {
+                EventDict["ba_gong"].wrapper.Probability = 0;
+                EventDict["ba_gong2"].wrapper.Probability = EventDict["ba_gong"].initProbability;
+            };
+            // 罢工2
+            EventDict["ba_gong2"].wrapper.Probability = 0;
+            EventDict["ba_gong2"].options[2].wrapper.CanUnlock =
+                option => TreeItemDict["zu_zhi_wei_yuan_hui"].wrapper.Unlocked;
 
 
             // 故事：复苏的火种
@@ -286,11 +355,8 @@ namespace Util {
 
             // 故事：离去
             EventDict["li_qu"].options[0].results[0].wrapper.OnTrigger = result => {
-                SceneObjRef.Instance.EventUI.ForceEndProcess();
-                GameLoop.Instance.StartNewRound();
+                SceneObjRef.Instance.EventUI.ForceEndProcessAndStartNewRound();
             };
-
-            // todo: other events
         }
 
 
@@ -307,48 +373,44 @@ namespace Util {
             // ---- Tech ----
             // lv1
             TreeItemDict["sun_mao_jie_gou"].wrapper.onUnlocked = delegate {
-                BuildingDict["zhu_fang_lv2"].ForceUnlock();
+                BuildingDict["zhu_fang_lv2"].TryUnlock();
                 BuildingLevels.Instance.Upgrade(PlayerBuildingType.ZhuFang);
             };
-            TreeItemDict["geng_li"].wrapper.onUnlocked = delegate { BuildingDict["nong_tian_lv1"].ForceUnlock(); };
+            TreeItemDict["geng_li"].wrapper.onUnlocked = delegate { BuildingDict["nong_tian_lv1"].TryUnlock(); };
             TreeItemDict["cha_yu_yan"].wrapper.onUnlocked = delegate {
                 var delta = PropertyManager.Instance.GameProp[PropertyType.PopulationDelta] * .2f;
                 var prop = new PropertyRepr(PropertyType.PopulationDelta, (int)delta);
                 PropertyManager.Instance.AddProperty(prop);
             };
-            TreeItemDict["ji_chu_ji_xie"].wrapper.onUnlocked = delegate {
-                BuildingDict["kuang_jing_lv1"].ForceUnlock();
-            };
+            TreeItemDict["ji_chu_ji_xie"].wrapper.onUnlocked = delegate { BuildingDict["kuang_jing_lv1"].TryUnlock(); };
             // lv2
             TreeItemDict["zhuan_hun_jie_gou"].wrapper.onUnlocked = delegate {
-                BuildingDict["zhu_fang_lv3"].ForceUnlock();
+                BuildingDict["zhu_fang_lv3"].TryUnlock();
                 BuildingLevels.Instance.Upgrade(PlayerBuildingType.ZhuFang);
             };
             TreeItemDict["cha_yang"].wrapper.onUnlocked = delegate {
-                BuildingDict["nong_tian_lv2"].ForceUnlock();
+                BuildingDict["nong_tian_lv2"].TryUnlock();
                 BuildingLevels.Instance.Upgrade(PlayerBuildingType.NongTian);
             };
             // lv3
             TreeItemDict["gang_hun_jie_gou"].wrapper.onUnlocked = delegate {
-                BuildingDict["zhu_fang_lv4"].ForceUnlock();
+                BuildingDict["zhu_fang_lv4"].TryUnlock();
                 BuildingLevels.Instance.Upgrade(PlayerBuildingType.ZhuFang);
             };
             TreeItemDict["li_ti_nong_ye"].wrapper.onUnlocked = delegate {
-                BuildingDict["nong_tian_lv3"].ForceUnlock();
+                BuildingDict["nong_tian_lv3"].TryUnlock();
                 BuildingLevels.Instance.Upgrade(PlayerBuildingType.NongTian);
             };
             // lv4
             TreeItemDict["gang_jie_gou"].wrapper.onUnlocked = delegate {
-                BuildingDict["zhu_fang_lv5"].ForceUnlock();
+                BuildingDict["zhu_fang_lv5"].TryUnlock();
                 BuildingLevels.Instance.Upgrade(PlayerBuildingType.ZhuFang);
             };
             TreeItemDict["da_xing_nong_yong_ji_xie"].wrapper.onUnlocked = delegate {
-                BuildingDict["nong_tian_lv4"].ForceUnlock();
+                BuildingDict["nong_tian_lv4"].TryUnlock();
                 BuildingLevels.Instance.Upgrade(PlayerBuildingType.NongTian);
             };
-            TreeItemDict["ci_li_xian_quan"].wrapper.onUnlocked = delegate {
-                BuildingDict["fa_dian_zhan"].ForceUnlock();
-            };
+            TreeItemDict["ci_li_xian_quan"].wrapper.onUnlocked = delegate { BuildingDict["fa_dian_zhan"].TryUnlock(); };
             // ---- Culture ----
             // lv1
             TreeItemDict["yin_you_ge_zhe"].wrapper.onUnlocked = delegate {

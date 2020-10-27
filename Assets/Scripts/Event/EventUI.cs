@@ -1,4 +1,5 @@
-﻿using Loop;
+﻿using System.Collections;
+using Loop;
 using Property;
 using TMPro;
 using UnityEngine;
@@ -93,8 +94,9 @@ namespace Event {
 
         private void NextEvent() {
             if(resultWrapper != null) {
-                resultWrapper.OnTrigger(resultWrapper);
+                var rstWrapper = resultWrapper;
                 resultWrapper = null;
+                rstWrapper.OnTrigger(rstWrapper);
             }
 
             var evmgr = EventManager.Instance;
@@ -109,14 +111,14 @@ namespace Event {
             title.text = "";
             mainDesc.text = "";
             mainImage.sprite = null;
+
             GameLoop.Instance.TransToMap();
         }
 
         // called when failed
-        public void ForceEndProcess() {
+        public void ForceEndProcessAndStartNewRound() {
             // clear queue
-            // clear by GameLoop
-            //EventManager.Instance.Clear()
+            EventManager.Instance.OnReset();
 
             // disable canvas
             gameObject.SetActive(false);
@@ -124,6 +126,22 @@ namespace Event {
             title.text = "";
             mainDesc.text = "";
             mainImage.sprite = null;
+            // clear options
+            var optionListChildren = new GameObject[optionList.childCount];
+            var idx = 0;
+            foreach(Transform option in optionList) {
+                optionListChildren[idx] = option.gameObject;
+                ++idx;
+            }
+            foreach(var option in optionListChildren) {
+                DestroyImmediate(option);
+            }
+
+            Invoke(nameof(StartNewRoundDelayed), Time.fixedDeltaTime);
+        }
+
+        private void StartNewRoundDelayed() {
+            GameLoop.Instance.StartNewRound();
         }
     }
 }

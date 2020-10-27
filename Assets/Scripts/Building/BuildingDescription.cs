@@ -25,20 +25,28 @@ namespace Building {
         public bool CanUnlock() => true;
 
         public bool TryUnlock() {
-            ForceUnlock();
+            if(!CanUnlock())
+                return false;
+            Unlocked = true;
+            if(playerBuildingType == PlayerBuildingType.Other)
+                return true;
+            if(SceneObjRef.Instance == null)
+                return true;
+            var ui = SceneObjRef.Instance.MapColliderUtil;
+            foreach(var block in MapManager.Instance.MapBlocksEnumerable) {
+                if(block.State != BlockState.OccupiedBase)
+                    continue;
+                if(block.Building.playerBuildingType == playerBuildingType) {
+                    block.SetBuilding(this);
+                    var pos = block.Position;
+                    ui.GetUIBlock(pos.x, pos.y).SetSprite(mainImage, spriteOffset);
+                }
+            }
             return true;
         }
 
         public void ForceUnlock() {
             Unlocked = true;
-            if(playerBuildingType == PlayerBuildingType.Other)
-                return;
-            foreach(var block in MapManager.Instance.MapBlocksEnumerable) {
-                if(block.State != BlockState.OccupiedBase)
-                    continue;
-                if(block.Building.playerBuildingType == playerBuildingType)
-                    block.SetBuilding(this);
-            }
         }
 
         public void Lock() {

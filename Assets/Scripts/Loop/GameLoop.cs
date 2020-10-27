@@ -2,6 +2,7 @@
 using Event;
 using Map;
 using Property;
+using Tree;
 using Turn;
 using Turn.Buff;
 using UnityEngine;
@@ -45,7 +46,15 @@ namespace Loop {
             //OnTransToEvent?.Invoke();
 
             // collect prop from map here
-            PropertyManager.Instance.AddProperty(MapManager.Instance.CollectProducts());
+            var propMgr = PropertyManager.Instance;
+            propMgr.AddProperty(MapManager.Instance.CollectProducts());
+            // bug: should set on building
+            var deltaPopulation = new PropertyRepr(PropertyType.Population,
+                                                   propMgr.GameProp[PropertyType.PopulationDelta]);
+            var deltaFinance = new PropertyRepr(PropertyType.Finance,
+                                                propMgr.GameProp[PropertyType.FinanceDelta]);
+            propMgr.AddProperty(deltaPopulation);
+            propMgr.AddProperty(deltaFinance);
 
             StartEventLoop();
         }
@@ -108,9 +117,21 @@ namespace Loop {
             TurnCounter.Instance.OnReset();
             //TurnCounter.Instance.OnNewTurn += BuffQueue.Instance.OnNewTurn;
             EventManager.Instance.OnReset();
+            MapManager.Instance.OnReset();
             // other start-ups here
             SceneObjRef.Instance.MapColliderUtil.ClearColliders();
             SceneObjRef.Instance.MapColliderUtil.GenerateColliders();
+
+            foreach(var sobj in SobjRef.Instance.TreeItemDict) {
+                if(sobj.type == TreeType.Tech)
+                    sobj.wrapper.Lock();
+            }
+            foreach(var sobj in SobjRef.Instance.BuildingDict) {
+                if(sobj.initAsLocked)
+                    sobj.Lock();
+                else
+                    sobj.ForceUnlock();
+            }
 
             // add start event & trans to event
             var evDict = SobjRef.Instance.EventDict;
@@ -138,7 +159,7 @@ namespace Loop {
                        .SetSprite(mainBase.mainImage, mainBase.spriteOffset);
 
             var initProp = MapManager.Instance.CollectProducts();
-            initProp += new PropertyReprGroup(100, 10, 100, 10);
+            initProp += new PropertyReprGroup(100, 0, 150, 0);
             PropertyManager.Instance.AddProperty(initProp);
 
             var eventUI = SceneObjRef.Instance.EventUI;

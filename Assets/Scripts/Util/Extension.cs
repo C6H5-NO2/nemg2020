@@ -11,7 +11,7 @@ namespace Util {
         //public static bool CheckLifetime(this UnityEngine.Object obj) => obj != null;
         public static float GetTurnFactor(EventType type) {
             var factor = 1.0f;
-            var turnCount = TurnCounter.Instance.TurnCount - 1;
+            var turnCount = TurnCounter.Instance.TurnCount;
             switch(type) {
                 case EventType.Policy:
                     factor = SobjRef.Instance.PropFactorList.factors[turnCount];
